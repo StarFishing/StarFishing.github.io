@@ -33,6 +33,14 @@
         }
     </style>
     
+    <script src="//cdn1.lncld.net/static/js/3.4.2/av-min.js"></script>
+    <script>
+      AV.init({
+        appId: 'xONPxB7WfgVHI1270Uooebth-gzGzoHsz',
+        appKey: 'WkECHPA7MANWz6eYPLJs62aP'
+      })
+    </script>
+    
     <!--<script type="text/javascript">
       if (document.images) {
         var avatar = new Image();
@@ -190,6 +198,10 @@
         <div class="tag-article">
             
             
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
             <!-- TODO 添加评论统计 -->
             <!--<span class="label label-gal">
                 <i class="fa fa-comments"></i>
@@ -201,7 +213,7 @@
                 <a href="/2018/08/01/Flower Day/">
                     <div class="img">
                         
-                        <img src="/imgs/preview/preview4.jpg" alt="Flower Day">
+                        <img src="/imgs/preview/preview1.jpg" alt="Flower Day">
                     </div>
                     <div class="info">
                         
@@ -228,6 +240,8 @@
         <p></p>
         <center>
             
+            
+            <i class="fa fa-eye"></i>
             
         </center>
         <p></p>
@@ -265,6 +279,10 @@
         <div class="tag-article">
             
             
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
             <!-- TODO 添加评论统计 -->
             <!--<span class="label label-gal">
                 <i class="fa fa-comments"></i>
@@ -276,7 +294,7 @@
                 <a href="/2018/08/01/hello-world/">
                     <div class="img">
                         
-                        <img src="/imgs/preview/preview3.jpg" alt="IRON MAN">
+                        <img src="/imgs/preview/preview4.jpg" alt="IRON MAN">
                     </div>
                     <div class="info">
                         
@@ -304,13 +322,15 @@
         <center>
             
             
+            <i class="fa fa-eye"></i>
+            
         </center>
         <p></p>
         <div class="alert alert-gal article-body content-article">
             <p style="text-align: center;">
                 <a href="/2018/08/01/hello-world/">
                     
-                    <img src="/imgs/preview/preview1.jpg" alt="IRON MAN">
+                    <img src="/imgs/preview/preview4.jpg" alt="IRON MAN">
                 </a>
             </p>
         </div>
@@ -390,6 +410,18 @@
 </aside>
     
     <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    <aside id="sidebar-hot_posts">
+    <div class="panel panel-gal hot hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-fire"></i>
+            最热文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
     
     
     <aside id="sidebar-recent_posts">
@@ -566,5 +598,33 @@
 <script src="/js/oni.js"></script>
 
 
+<script>
+    window.hot_posts_count = '10'
+    // window.use_leancloud = 'true'
+</script>
+<script src="/js/comment/leancloud.js"></script>
+
+
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = ''
+      window.commentConfig.owner = 'StarFishing'
+      window.commentConfig.repo = 'Comment'
+      window.commentConfig.client_id = 'b78dcc1ba9ea057366f1'
+      window.commentConfig.client_secret = 'cbae26d62703e4f876f1ecb46fb3c3e1e3c3c3ec'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: '',
+        owner: 'StarFishing',
+        repo: 'Comment',
+        client_id: 'b78dcc1ba9ea057366f1',
+        client_secret: 'cbae26d62703e4f876f1ecb46fb3c3e1e3c3c3ec',
+        redirect_uri: ''
+      }
+    }
+</script>
+<script src="/js/comment/gitment.js"></script>
 
 </html>
