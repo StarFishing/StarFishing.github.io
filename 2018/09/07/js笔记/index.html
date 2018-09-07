@@ -12,7 +12,7 @@
     
     
     
-    <title>categories: essay | For You</title>
+    <title>js笔记 | For You</title>
     <link href=”http://starfishing.github.io“ rel=”prefetch” />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -131,7 +131,7 @@
                 
                 
                 
-                <li class="current">
+                <li class="">
                     <a href="/categories">
                         <i class="fa fa-list"></i>分类
                     </a>
@@ -196,19 +196,38 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-category">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="http://starfishing.github.io">For You</a>
         >
-        <span>目录</span>
+        <span>js笔记</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/categories/essay/index.html">essay</a>
+                <a href="/2018/09/07/js笔记/">js笔记</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/js/">js</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2018-09-07
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -216,24 +235,60 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/categories/essay/index.html">essay</a>
+                    <a href="/2018/09/07/js笔记/">js笔记</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2018-09-07
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/js/">js</a>
+                
+                
+                
+                <i class="fa fa-eye"></i>
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-            <a href="/2018/08/01/Flower Day/">Flower Day</a>
-            <br>
-            
-            <a href="/2018/08/01/hello-world/">IRON MAN</a>
-            <br>
-            
-            
-        </div>
+    <div class="content-article">
+        <p>null和undefined</p>
+<p>两者数值相等，类型不同</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if（null==undefined）返回true；if（null===undefined）返回false,两者不同类型；</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var test=&quot;2e3&quot;;test=parseFloat(test);//test=parseInt(test);</span><br><span class="line">alert(test)；</span><br><span class="line">2000（转换为float时会用科学计数法，结果为2000）//2（转换为int型结果为2）</span><br></pre></td></tr></table></figure>
+<p>null支持自增自减（–、++）</p>
+<p>switch、case语句：若语句中没有break（在匹配到其中一个case的情况下），条件语句将会顺序执行，不会考虑下面case的情况,直到遇到break；若没有匹配的case，将会执行default，也会执行default下面的case（没有break的情况下）；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">/*执行结果为 01case 02case 03case*/</span><br><span class="line">var i=1;</span><br><span class="line">switch (i)&#123;</span><br><span class="line">    case 1:document.write(&quot;01case&quot;);</span><br><span class="line">    case 2:document.write(&quot;02case&quot;);</span><br><span class="line">    case 3:document.write(&quot;03case&quot;);</span><br><span class="line">&#125;</span><br><span class="line">/*执行结果为nofit 03case （当有brake时，执行结果为nofit）*/</span><br><span class="line">var i=5;</span><br><span class="line">switch (i)&#123;</span><br><span class="line">    case 1:</span><br><span class="line">           document.write(&quot;01case&quot;);</span><br><span class="line">    case 2:</span><br><span class="line">           document.write(&quot;02case&quot;);</span><br><span class="line">    default：</span><br><span class="line">            document.write(&quot;nofit&quot;);</span><br><span class="line">    //break；</span><br><span class="line">    case 3:</span><br><span class="line">            document.write(&quot;03case&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>continue语句跳过当前花括号内的语句；</p>
+<p>打印九九乘法表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">document.write(&apos;&lt;table border=&quot;1&quot; cellpading=&quot;0&quot; width=&quot;800&quot;&gt;&apos;);</span><br><span class="line">for(var i=1;i&lt;=9;i++)//for(var i=9;i&gt;=1;i--)注释内容用来打印倒得乘法表</span><br><span class="line">  &#123;</span><br><span class="line">    document.write(&apos;&lt;tr&gt;&apos;);</span><br><span class="line">      for(var j=1;j&lt;=i;j++)//for(var j=i;j&gt;=1;j--)</span><br><span class="line">        &#123;</span><br><span class="line">    document.write(&apos;&lt;td bgcolor=&quot;grey&quot;&gt;&apos;+j+&apos;x&apos;+i+&apos;=&apos;+i*j+&apos;&lt;/td&gt;&apos;)</span><br><span class="line">         &#125;</span><br><span class="line">    document.write(&apos;&lt;/tr&gt;&apos;);</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line"> document.write(&apos;&lt;/table&gt;&apos;);</span><br></pre></td></tr></table></figure>
+<p>百钱买百鸡问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var x,y,z;//x为公鸡数量，y为母鸡数量，z为小鸡数量</span><br><span class="line">      var cost;//费用</span><br><span class="line"></span><br><span class="line">       for(x=0;x&lt;=20;x++)&#123;/*公鸡最多20只*/</span><br><span class="line">           for(y=0;y&lt;=33;y++)&#123;/*母鸡最多33只*/</span><br><span class="line">               z=100-x-y;</span><br><span class="line">               if(z%3==0)&#123;/*刚好满足小鸡数为整数，且刚好一百只鸡*/</span><br><span class="line">                   cost=5*x+3*y+z/3;</span><br><span class="line">                   if(cost==100)&#123;</span><br><span class="line">                       document.write(&quot;公鸡&quot;+x+&quot;只\n&quot;+&quot;母鸡&quot;+y+&quot;只\n&quot;+&quot;小鸡&quot;+z+&quot;只&lt;br&gt;&quot;);</span><br><span class="line">                   &#125;</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<p>函数参数问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function calc1(num1,num2)</span><br><span class="line">&#123;</span><br><span class="line">    num1=num1||1;/*当函数调用不给参数时，num会取值为1，当有参数时，使用原来的参数*/</span><br><span class="line">    num2=num2||2;/*同理*/</span><br><span class="line">    return (num1+num2);  </span><br><span class="line">&#125;</span><br><span class="line">calc1();</span><br></pre></td></tr></table></figure>
+<p>可以通过arguments对象实现可变参数的函数，也可以实现默认值的效果；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">/*可变参数形式的函数*/</span><br><span class="line">function test()</span><br><span class="line">&#123;</span><br><span class="line">  var paramsNum=arguments.length;/*得到传入参数的个数*/</span><br><span class="line">  </span><br><span class="line">  var sum=0;</span><br><span class="line">  for(var i=0;i&lt;paramsNum;i++)</span><br><span class="line">    &#123;</span><br><span class="line">      </span><br><span class="line">      sum+=arguments[i];</span><br><span class="line">      &#125;</span><br><span class="line">  return sum;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function test1()</span><br><span class="line">&#123;</span><br><span class="line">  //var x=arguments[0]||2;</span><br><span class="line">  var x=arguments[0]?arguments[0]:2;</span><br><span class="line">  /*同上一句话等价，但是三元运算符只对arguments对象生效*/</span><br><span class="line">  </span><br><span class="line">  var y=arguments[1]||3;</span><br><span class="line">  </span><br><span class="line">  return (x+y);</span><br><span class="line">&#125;</span><br><span class="line">document.write(test(1,3,6,7,9)+&quot;&lt;/br&gt;&quot;);//26</span><br><span class="line">document.write(test1(3,5)+&quot;&lt;/br&gt;&quot;);//8</span><br><span class="line">document.write(test1());//5</span><br></pre></td></tr></table></figure>
+<p>通过 <code>isFinite()</code>检测是否为无穷值（函数含义等同于判断这个数值是否有穷）；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var x=Infinity;/-Infinity,0/0</span><br><span class="line">alert(isFinite(x));//false</span><br></pre></td></tr></table></figure>
+<p>创建一个普通的空对象；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var obj=Object.create(Object.prototype);</span><br><span class="line">或者var obj=Object.create(null);</span><br></pre></td></tr></table></figure>
+
     </div>
 </article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = 'js笔记'
+    }
+</script>
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -398,31 +453,31 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/categories/essay/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2018/09/07/js笔记/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/categories/essay/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2018/09/07/js笔记/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/categories/essay/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2018/09/07/js笔记/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/视频/" style="font-size: 12.754911690343498px;" class="tag-cloud-link">视频</a>
+    <a href="/tags/视频/" style="font-size: 11.78507343516607px;" class="tag-cloud-link">视频</a>
     
-    <a href="/tags/mood/" style="font-size: 11.98900513921016px;" class="tag-cloud-link">mood</a>
+    <a href="/tags/mood/" style="font-size: 16.104254244451855px;" class="tag-cloud-link">mood</a>
     
-    <a href="/tags/esssy/" style="font-size: 11.486560420402842px;" class="tag-cloud-link">esssy</a>
+    <a href="/tags/esssy/" style="font-size: 12.558507971648282px;" class="tag-cloud-link">esssy</a>
     
-    <a href="/tags/hexo/" style="font-size: 17.167654269299646px;" class="tag-cloud-link">hexo</a>
+    <a href="/tags/hexo/" style="font-size: 16.926119765910755px;" class="tag-cloud-link">hexo</a>
     
-    <a href="/tags/js/" style="font-size: 14.589832223985432px;" class="tag-cloud-link">js</a>
+    <a href="/tags/js/" style="font-size: 8.961538759161105px;" class="tag-cloud-link">js</a>
     
-    <a href="/tags/HTML，CSS，HEXO，Node-js/" style="font-size: 8.77354814122953px;" class="tag-cloud-link">HTML，CSS，HEXO，Node.js</a>
+    <a href="/tags/HTML，CSS，HEXO，Node-js/" style="font-size: 13.387748047839576px;" class="tag-cloud-link">HTML，CSS，HEXO，Node.js</a>
     
-    <a href="/tags/article/" style="font-size: 16.151044687247616px;" class="tag-cloud-link">article</a>
+    <a href="/tags/article/" style="font-size: 17.572498435035705px;" class="tag-cloud-link">article</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
@@ -537,7 +592,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
     if(window.commentConfig) {
-      window.commentConfig.id = ''
+      window.commentConfig.id = 'Fri Sep 07 2018 20:30:55 GMT+0800'
       window.commentConfig.owner = 'StarFishing'
       window.commentConfig.repo = 'Comment'
       window.commentConfig.client_id = 'b78dcc1ba9ea057366f1'
@@ -545,7 +600,7 @@
       window.commentConfig.redirect_uri = ''
     } else {
       window.commentConfig = {
-      	id: '',
+      	id: 'Fri Sep 07 2018 20:30:55 GMT+0800',
         owner: 'StarFishing',
         repo: 'Comment',
         client_id: 'b78dcc1ba9ea057366f1',
