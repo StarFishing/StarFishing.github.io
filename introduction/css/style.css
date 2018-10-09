@@ -799,7 +799,7 @@ img {
 .loading .pic{
     width: 64px;
     height:64px;
-    /*background: url(../images/01.gif);*/
+    background: url(../images/01.gif);
     position:absolute;
     top: 0;
     bottom: 0;
