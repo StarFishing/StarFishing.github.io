@@ -12,7 +12,7 @@
     
     
     
-    <title>留言板 | For You</title>
+    <title>For You</title>
     <link href=”http://starfishing.github.io“ rel=”prefetch” />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -173,7 +173,7 @@
                 
                 
                 
-                <li class="current">
+                <li class="">
                     <a href="/message">
                         <i class="fa fa-heart"></i>留言板
                     </a>
@@ -196,21 +196,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <!-- 搜索页面(尽可能接近ZanBlog搜索功能) -->
-
-
+                    
 <article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://starfishing.github.io">For You</a>
+        >
+        <span></span>
+    </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/message/index.html">留言板</a>
+                <a href="/2018/10/15/CSS Sticky footer完美底部布局/"></a>
             </h1>
         </div>
         <div class="tag-article">
+            
             <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2018-08-03
+                <i class="fa fa-calendar"></i> 2018-10-15
             </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -218,16 +228,24 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/message/index.html">留言板</a>
+                    <a href="/2018/10/15/CSS Sticky footer完美底部布局/"></a>
                 </h4>
             </div>
             <p>
-                <i class="fa fa-calendar"></i> 2018-08-03
+                <i class="fa fa-calendar"></i> 2018-10-15
+            </p>
+            <p>
+                
+                
+                <i class="fa fa-eye"></i>
+                
             </p>
         </center>
     </div>
     <div class="content-article">
-        <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1533280067642&amp;di=d323cc12bf63394a27839b9d6c48538a&amp;imgtype=0&amp;src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Farchive%2F7dabd2bd0e194579aa0a430111e3a06b5c890ccd.jpg" alt=""></p>
+        <h2 id="CSS-Sticky-footer完美底部布局"><a href="#CSS-Sticky-footer完美底部布局" class="headerlink" title="CSS Sticky footer完美底部布局"></a>CSS Sticky footer完美底部布局</h2><h3 id="html-结构："><a href="#html-结构：" class="headerlink" title="html 结构："></a>html 结构：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;container&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;content-wrapper&gt;</span><br><span class="line">       &lt;div class=&quot;content&quot;&gt;内容区域，可随机长度&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;close&quot;&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class =&quot;close&quot;&gt;关闭图标&lt;/div&gt;始终再底部.</span><br></pre></td></tr></table></figure>
+<h3 id="css代码："><a href="#css代码：" class="headerlink" title="css代码："></a>css代码：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">.container&#123;//总容器为全屏，所以高度为100％</span><br><span class="line">  positon: fiexd;//固定窗口，显示在最前</span><br><span class="line">  top:0;</span><br><span class="line">  left:0;</span><br><span class="line">  height:100%;</span><br><span class="line">  width:100%;</span><br><span class="line">  overflow: auto;//如果内容太长，会显示滚动条查看其余内容。</span><br><span class="line"> &#125;</span><br><span class="line">.content-wrapper&#123;</span><br><span class="line">  min-height: 100%;//如果内容不够长时，也保证内容有全屏长度</span><br><span class="line">&#125;</span><br><span class="line">.content&#123;</span><br><span class="line">  margin-top: 50px;//向上和屏幕顶部保持50px间距</span><br><span class="line">  padding-bottom: 50px;//保证内容content区域的底部有50px的空白</span><br><span class="line">&#125;</span><br><span class="line">.close&#123;</span><br><span class="line">   position: relative</span><br><span class="line">    width: 32px;</span><br><span class="line">    height: 32px;</span><br><span class="line">    margin: -50px auto 0 auto;  //让关闭按钮向content－wrapper里面伸入50px，正好把内容区的50px空白补上</span><br><span class="line">    clear: both;</span><br><span class="line">    font-size: 32px;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果:"></a>最终效果:</h3><p><img src="http://pczr1g7oj.bkt.clouddn.com/example%5Cimage%5CStickyFooter.png" alt=""></p>
 
     </div>
 </article>
@@ -238,10 +256,9 @@
 <script>
 	if(!window.commentConfig) {
       window.commentConfig = {}
-      window.commentConfig.title = '留言板'
+      window.commentConfig.title = ''
     }
 </script>
-
 
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
@@ -431,33 +448,33 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/message/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2018/10/15/CSS Sticky footer完美底部布局/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/message/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2018/10/15/CSS Sticky footer完美底部布局/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/message/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2018/10/15/CSS Sticky footer完美底部布局/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/HTML，CSS，HEXO，Node-js/" style="font-size: 16.72167116201476px;" class="tag-cloud-link">HTML，CSS，HEXO，Node.js</a>
+    <a href="/tags/HTML，CSS，HEXO，Node-js/" style="font-size: 19.181103300634856px;" class="tag-cloud-link">HTML，CSS，HEXO，Node.js</a>
     
-    <a href="/tags/视频/" style="font-size: 10.666478733641622px;" class="tag-cloud-link">视频</a>
+    <a href="/tags/视频/" style="font-size: 10.690384983023218px;" class="tag-cloud-link">视频</a>
     
-    <a href="/tags/mood/" style="font-size: 12.348504716607325px;" class="tag-cloud-link">mood</a>
+    <a href="/tags/mood/" style="font-size: 10.718024959267474px;" class="tag-cloud-link">mood</a>
     
-    <a href="/tags/esssy/" style="font-size: 14.115266187632924px;" class="tag-cloud-link">esssy</a>
+    <a href="/tags/esssy/" style="font-size: 13.481518887643176px;" class="tag-cloud-link">esssy</a>
     
-    <a href="/tags/hexo/" style="font-size: 15.078600760703235px;" class="tag-cloud-link">hexo</a>
+    <a href="/tags/hexo/" style="font-size: 8.894068255192016px;" class="tag-cloud-link">hexo</a>
     
-    <a href="/tags/article/" style="font-size: 11.388438651193235px;" class="tag-cloud-link">article</a>
+    <a href="/tags/article/" style="font-size: 17.999247561825214px;" class="tag-cloud-link">article</a>
     
-    <a href="/tags/vue-js/" style="font-size: 14.71571504631941px;" class="tag-cloud-link">vue.js</a>
+    <a href="/tags/vue-js/" style="font-size: 19.078055700309754px;" class="tag-cloud-link">vue.js</a>
     
-    <a href="/tags/js/" style="font-size: 14.595634543374823px;" class="tag-cloud-link">js</a>
+    <a href="/tags/js/" style="font-size: 10.774402431243557px;" class="tag-cloud-link">js</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
@@ -576,7 +593,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
     if(window.commentConfig) {
-      window.commentConfig.id = 'Fri Aug 03 2018 12:18:05 GMT+0800'
+      window.commentConfig.id = 'Mon Oct 15 2018 21:41:21 GMT+0800'
       window.commentConfig.owner = 'StarFishing'
       window.commentConfig.repo = 'Comment'
       window.commentConfig.client_id = 'b78dcc1ba9ea057366f1'
@@ -584,7 +601,7 @@
       window.commentConfig.redirect_uri = ''
     } else {
       window.commentConfig = {
-      	id: 'Fri Aug 03 2018 12:18:05 GMT+0800',
+      	id: 'Mon Oct 15 2018 21:41:21 GMT+0800',
         owner: 'StarFishing',
         repo: 'Comment',
         client_id: 'b78dcc1ba9ea057366f1',
