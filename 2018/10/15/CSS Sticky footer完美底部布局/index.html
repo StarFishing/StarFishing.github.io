@@ -150,11 +150,11 @@
                         
                         
                         <li>
-                            <a href="/tags/视频/">视频</a>
+                            <a href="/tags/HTML，CSS，HEXO，Node-js/">HTML，CSS，HEXO，Node.js</a>
                         </li>
                         
                         <li>
-                            <a href="/tags/HTML，CSS，HEXO，Node-js/">HTML，CSS，HEXO，Node.js</a>
+                            <a href="/tags/视频/">视频</a>
                         </li>
                         
                         <li>
@@ -256,7 +256,7 @@
     </div>
     <div class="content-article">
         <h2 id="CSS-Sticky-footer完美底部布局"><a href="#CSS-Sticky-footer完美底部布局" class="headerlink" title="CSS Sticky footer完美底部布局"></a>CSS Sticky footer完美底部布局</h2><h3 id="html-结构："><a href="#html-结构：" class="headerlink" title="html 结构："></a>html 结构：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;container&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;content-wrapper&gt;</span><br><span class="line">       &lt;div class=&quot;content&quot;&gt;内容区域，可随机长度&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;close&quot;&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class =&quot;close&quot;&gt;关闭图标&lt;/div&gt;始终再底部.</span><br></pre></td></tr></table></figure>
-<h3 id="css代码："><a href="#css代码：" class="headerlink" title="css代码："></a>css代码：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">.container&#123;//总容器为全屏，所以高度为100％</span><br><span class="line">  positon: fiexd;//固定窗口，显示在最前</span><br><span class="line">  top:0;</span><br><span class="line">  left:0;</span><br><span class="line">  height:100%;</span><br><span class="line">  width:100%;</span><br><span class="line">  overflow: auto;//如果内容太长，会显示滚动条查看其余内容。</span><br><span class="line"> &#125;</span><br><span class="line">.content-wrapper&#123;</span><br><span class="line">  min-height: 100%;//如果内容不够长时，也保证内容有全屏长度</span><br><span class="line">&#125;</span><br><span class="line">.content&#123;</span><br><span class="line">  margin-top: 50px;//向上和屏幕顶部保持50px间距</span><br><span class="line">  padding-bottom: 50px;//保证内容content区域的底部有50px的空白</span><br><span class="line">&#125;</span><br><span class="line">.close&#123;</span><br><span class="line">   position: relative</span><br><span class="line">    width: 32px;</span><br><span class="line">    height: 32px;</span><br><span class="line">    margin: -50px auto 0 auto;  //让关闭按钮向content－wrapper里面伸入50px，正好把内容区的50px空白补上</span><br><span class="line">    clear: both;</span><br><span class="line">    font-size: 32px;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="css代码："><a href="#css代码：" class="headerlink" title="css代码："></a>css代码：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">.container&#123;//总容器为全屏，所以高度为100％</span><br><span class="line">  positon: fiexd;//固定窗口，显示在最前</span><br><span class="line">  top:0;</span><br><span class="line">  left:0;</span><br><span class="line">  height:100%;</span><br><span class="line">  width:100%;</span><br><span class="line">  overflow: auto;//如果内容太长，会显示滚动条查看其余内容。</span><br><span class="line"> &#125;</span><br><span class="line">.content-wrapper&#123;</span><br><span class="line">  min-height: 100%;//如果内容不够长时，也保证内容有全屏长度</span><br><span class="line">&#125;</span><br><span class="line">.content&#123;</span><br><span class="line">  margin-top: 50px;//向上和屏幕顶部保持50px间距</span><br><span class="line">  padding-bottom: 50px;//保证内容content区域的底部有50px的空白</span><br><span class="line">&#125;</span><br><span class="line">.close&#123;</span><br><span class="line">   position: relative</span><br><span class="line">    width: 32px;</span><br><span class="line">    height: 32px;</span><br><span class="line">    margin: -50px auto 0 auto; //让关闭按钮向content－wrapper里面伸入50px，正好把内容区</span><br><span class="line">    的50px空白补上</span><br><span class="line">    clear: both;</span><br><span class="line">    font-size: 32px;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果:"></a>最终效果:</h3><p><img src="http://pczr1g7oj.bkt.clouddn.com/example%5Cimage%5CStickyFooter.png" alt=""></p>
 
     </div>
@@ -417,13 +417,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/09/02/02/">快把我哥带走</a>
+                    <a href="/2018/08/06/01/">常用工具网站</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/08/06/01/">常用工具网站</a>
+                    <a href="/2018/09/02/02/">快把我哥带走</a>
                 </span>
             </li>
             
@@ -436,12 +436,6 @@
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2018/08/01/Flower Day/">Flower Day</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/10/15/Vue.js中data,props和computed数据/">Vue.js中data,props和computed数据</a>
                 </span>
             </li>
             
@@ -475,6 +469,12 @@
                 </span>
             </li>
             
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/10/15/Vue.js中data,props和computed数据/">Vue.js中data,props和computed数据</a>
+                </span>
+            </li>
+            
         </ul>
     </div>
 </aside>
@@ -496,27 +496,27 @@
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/视频/" style="font-size: 15.111518024625301px;" class="tag-cloud-link">视频</a>
+    <a href="/tags/HTML，CSS，HEXO，Node-js/" style="font-size: 14.534023847201702px;" class="tag-cloud-link">HTML，CSS，HEXO，Node.js</a>
     
-    <a href="/tags/HTML，CSS，HEXO，Node-js/" style="font-size: 15.710445668850777px;" class="tag-cloud-link">HTML，CSS，HEXO，Node.js</a>
+    <a href="/tags/视频/" style="font-size: 15.46059729291067px;" class="tag-cloud-link">视频</a>
     
-    <a href="/tags/CSS-Sticky-footer/" style="font-size: 17.02667645501668px;" class="tag-cloud-link">CSS Sticky footer</a>
+    <a href="/tags/CSS-Sticky-footer/" style="font-size: 16.71899153208376px;" class="tag-cloud-link">CSS Sticky footer</a>
     
-    <a href="/tags/mood/" style="font-size: 11.922490038099575px;" class="tag-cloud-link">mood</a>
+    <a href="/tags/mood/" style="font-size: 17.122897956143387px;" class="tag-cloud-link">mood</a>
     
-    <a href="/tags/esssy/" style="font-size: 14.52020555243564px;" class="tag-cloud-link">esssy</a>
+    <a href="/tags/esssy/" style="font-size: 12.794252878763563px;" class="tag-cloud-link">esssy</a>
     
-    <a href="/tags/hexo/" style="font-size: 19.22386129176613px;" class="tag-cloud-link">hexo</a>
+    <a href="/tags/hexo/" style="font-size: 18.203647812632084px;" class="tag-cloud-link">hexo</a>
     
-    <a href="/tags/vue-js/" style="font-size: 15.21024244511711px;" class="tag-cloud-link">vue.js</a>
+    <a href="/tags/vue项目开发/" style="font-size: 8.304660954011974px;" class="tag-cloud-link">vue项目开发</a>
     
-    <a href="/tags/vue项目开发/" style="font-size: 14.2185391097989px;" class="tag-cloud-link">vue项目开发</a>
+    <a href="/tags/article/" style="font-size: 10.542555022408944px;" class="tag-cloud-link">article</a>
     
-    <a href="/tags/article/" style="font-size: 14.639492114475729px;" class="tag-cloud-link">article</a>
+    <a href="/tags/js/" style="font-size: 16.52288208556041px;" class="tag-cloud-link">js</a>
     
-    <a href="/tags/js/" style="font-size: 15.396565995922531px;" class="tag-cloud-link">js</a>
+    <a href="/tags/vue2-0用法分析/" style="font-size: 11.625793954205683px;" class="tag-cloud-link">vue2.0用法分析</a>
     
-    <a href="/tags/vue2-0用法分析/" style="font-size: 16.007703047424613px;" class="tag-cloud-link">vue2.0用法分析</a>
+    <a href="/tags/vue-js/" style="font-size: 9.326226962275854px;" class="tag-cloud-link">vue.js</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
