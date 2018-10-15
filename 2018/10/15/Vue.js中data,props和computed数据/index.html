@@ -12,7 +12,7 @@
     
     
     
-    <title>archive_a | For You</title>
+    <title>Vue.js中data,props和computed数据 | For You</title>
     <link href=”http://starfishing.github.io“ rel=”prefetch” />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -123,7 +123,7 @@
                 
                 
                 
-                <li class="current">
+                <li class="">
                     <a href="/archives">
                         <i class="fa fa-archive"></i>归档
                     </a>
@@ -196,19 +196,38 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-archive">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="http://starfishing.github.io">For You</a>
         >
-        <span>归档</span>
+        <span>Vue.js中data,props和computed数据</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/archives">归档</a>
+                <a href="/2018/10/15/Vue.js中data,props和computed数据/">Vue.js中data,props和computed数据</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/vue-js/">vue.js</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2018-10-15
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -216,51 +235,93 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/archives">归档</a>
+                    <a href="/2018/10/15/Vue.js中data,props和computed数据/">Vue.js中data,props和computed数据</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2018-10-15
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/vue-js/">vue.js</a>
+                
+                
+                
+                <i class="fa fa-eye"></i>
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        
-        
-            <h1 style="font-size: 24px; margin-top: 40px;">2018年</h1>
-            
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-             
-             
-                        <a href="/2018/10/15/Vue.js中data,props和computed数据/">Vue.js中data,props和computed数据</a>
-                        <br>
-            
-             
-                        <a href="/2018/09/07/js笔记/">js笔记</a>
-                        <br>
-            
-             
-                        <a href="/2018/09/02/02/">快把我哥带走</a>
-                        <br>
-            
-             
-                        <a href="/2018/08/06/01/">常用工具网站</a>
-                        <br>
-            
-             
-                        <a href="/2018/08/04/文集/">Actical</a>
-                        <br>
-            
-             
-                        <a href="/2018/08/01/Flower Day/">Flower Day</a>
-                        <br>
-            
-             
-                        <a href="/2018/08/01/hello-world/">IRON MAN</a>
-                        <br>
-            
-                    </div>
-        
+    <div class="content-article">
+        <h2 id="Vue-js中data-props和computed数据"><a href="#Vue-js中data-props和computed数据" class="headerlink" title="Vue.js中data,props和computed数据"></a>Vue.js中data,props和computed数据</h2><p>data 是Vue实例的数据对象。Vue将会将data 的属性转换为 getter/setter, 也就是用Object.defineProperty方法(在官网里面有深入响应式原理里面具体的介绍)。对象必须是纯粹的对象(含有零个或多个的key/value对)。因为这里面的数据都是被监控的，所以说这里面的数据最好都是在视图层显示的数据。如果说不是在视图层展示的变量。可以定义在外面或者放在vm对象上。</p>
+<h2 id="data"><a href="#data" class="headerlink" title="data"></a>data</h2><ul>
+<li><p><strong>类型</strong>：<code>Object | Function</code></p>
+</li>
+<li><p><strong>限制</strong>：组件的定义只接受 <code>function</code>。</p>
+</li>
+<li><p><strong>详细</strong>：</p>
+<p>Vue 实例的数据对象。Vue 将会递归将 data 的属性转换为 getter/setter，从而让 data 的属性能够响应数据变化。<strong>对象必须是纯粹的对象 (含有零个或多个的 key/value 对)</strong>：浏览器 API 创建的原生对象，原型上的属性会被忽略。大概来说，data 应该只能是数据 - 不推荐观察拥有状态行为的对象。</p>
+<p>一旦观察过，不需要再次在数据对象上添加响应式属性。因此推荐在创建实例之前，就声明所有的根级响应式属性。</p>
+<p>实例创建之后，可以通过 <code>vm.$data</code> 访问原始数据对象。Vue 实例也代理了 data 对象上所有的属性，因此访问 <code>vm.a</code> 等价于访问 <code>vm.$data.a</code>。</p>
+<p>以 <code>_</code> 或 <code>$</code> 开头的属性 <strong>不会</strong> 被 Vue 实例代理，因为它们可能和 Vue 内置的属性、API 方法冲突。你可以使用例如 <code>vm.$data._property</code> 的方式访问这些属性。</p>
+<p>当一个<strong>组件</strong>被定义，<code>data</code> 必须声明为返回一个初始数据对象的函数，因为组件可能被用来创建多个实例。如果 <code>data</code> 仍然是一个纯粹的对象，则所有的实例将<strong>共享引用</strong>同一个数据对象！通过提供 <code>data</code> 函数，每次创建一个新实例后，我们能够调用 <code>data</code> 函数，从而返回初始数据的一个全新副本数据对象。</p>
+<p>如果需要，可以通过将 <code>vm.$data</code> 传入 <code>JSON.parse(JSON.stringify(...))</code> 得到深拷贝的原始数据对象。</p>
+</li>
+<li><p><strong>示例</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var data = &#123; a: 1 &#125;</span><br><span class="line"></span><br><span class="line">// 直接创建一个实例</span><br><span class="line">var vm = new Vue(&#123;</span><br><span class="line">  data: data</span><br><span class="line">&#125;)</span><br><span class="line">vm.a // =&gt; 1</span><br><span class="line">vm.$data === data // =&gt; true</span><br><span class="line"></span><br><span class="line">// Vue.extend() 中 data 必须是函数</span><br><span class="line">var Component = Vue.extend(&#123;</span><br><span class="line">  data: function () &#123;</span><br><span class="line">    return &#123; a: 1 &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>注意，如果你为 <code>data</code> 属性使用了箭头函数，则 <code>this</code> 不会指向这个组件的实例，不过你仍然可以将其实例作为函数的第一个参数来访问。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data: vm =&gt; (&#123; a: vm.myProp &#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="props"><a href="#props" class="headerlink" title="props"></a>props</h2><p>props 是props 可以是数组或对象，用于接收来自父组件的数据。props 可以是简单的数组，或者使用对象作为替代，</p>
+<p>对象允许配置高级选项，如类型检测、自定义校验和设置默认值。</p>
+<ul>
+<li><p><strong>类型</strong>：<code>Array&lt;string&gt; | Object</code></p>
+</li>
+<li><p><strong>详细</strong>：</p>
+<p>props 可以是数组或对象，用于接收来自父组件的数据。props 可以是简单的数组，或者使用对象作为替代，对象允许配置高级选项，如类型检测、自定义校验和设置默认值。</p>
+</li>
+<li><p><strong>示例</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">// 简单语法</span><br><span class="line">Vue.component(&apos;props-demo-simple&apos;, &#123;</span><br><span class="line">  props: [&apos;size&apos;, &apos;myMessage&apos;]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// 对象语法，提供校验</span><br><span class="line">Vue.component(&apos;props-demo-advanced&apos;, &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    // 检测类型</span><br><span class="line">    height: Number,</span><br><span class="line">    // 检测类型 + 其他验证</span><br><span class="line">    age: &#123;</span><br><span class="line">      type: Number,</span><br><span class="line">      default: 0,</span><br><span class="line">      required: true,</span><br><span class="line">      validator: function (value) &#123;</span><br><span class="line">        return value &gt;= 0</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="computed"><a href="#computed" class="headerlink" title="computed"></a>computed</h2><p>计算属性将被混入到 Vue 实例中。所有 getter 和 setter 的 this 上下文自动地绑定为 Vue 实例。不过计算属性也用</p>
+<p>函数来替代。</p>
+<ul>
+<li><p><strong>类型</strong>：<code>{ [key: string]: Function | { get: Function, set: Function } }</code></p>
+</li>
+<li><p><strong>详细</strong>：</p>
+<p>计算属性将被混入到 Vue 实例中。所有 getter 和 setter 的 this 上下文自动地绑定为 Vue 实例。</p>
+<p>注意如果你为一个计算属性使用了箭头函数，则 <code>this</code> 不会指向这个组件的实例，不过你仍然可以将其实例作为函数的第一个参数来访问。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">  aDouble: vm =&gt; vm.a * 2</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>计算属性的结果会被缓存，除非依赖的响应式属性变化才会重新计算。注意，如果某个依赖 (比如非响应式属性) 在该实例范畴之外，则计算属性是<strong>不会</strong>被更新的。</p>
+</li>
+<li><p><strong>示例</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">var vm = new Vue(&#123;</span><br><span class="line">  data: &#123; a: 1 &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    // 仅读取</span><br><span class="line">    aDouble: function () &#123;</span><br><span class="line">      return this.a * 2</span><br><span class="line">    &#125;,</span><br><span class="line">    // 读取和设置</span><br><span class="line">    aPlus: &#123;</span><br><span class="line">      get: function () &#123;</span><br><span class="line">        return this.a + 1</span><br><span class="line">      &#125;,</span><br><span class="line">      set: function (v) &#123;</span><br><span class="line">        this.a = v - 1</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">vm.aPlus   // =&gt; 2</span><br><span class="line">vm.aPlus = 3</span><br><span class="line">vm.a       // =&gt; 2</span><br><span class="line">vm.aDouble // =&gt; 4</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a><strong>注意：</strong></h3><ul>
+<li>父组件改变props，子组件如果直接使用props，会触发子组件更新</li>
+<li>父组件改变props，子组件如果将props放进data中再使用，不会触发子组件更新</li>
+<li>父组件改变props，子组件如果将props放进computed中再使用，会触发子组件更新</li>
+<li>data，props和computed的变化都会触发组件更新</li>
+</ul>
+
     </div>
 </article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = 'Vue.js中data,props和computed数据'
+    }
+</script>
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -437,33 +498,33 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/archives/2018/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2018/10/15/Vue.js中data,props和computed数据/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/archives/2018/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2018/10/15/Vue.js中data,props和computed数据/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/archives/2018/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2018/10/15/Vue.js中data,props和computed数据/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/mood/" style="font-size: 16.02537646251765px;" class="tag-cloud-link">mood</a>
+    <a href="/tags/mood/" style="font-size: 13.646791341318552px;" class="tag-cloud-link">mood</a>
     
-    <a href="/tags/esssy/" style="font-size: 12.850191749169667px;" class="tag-cloud-link">esssy</a>
+    <a href="/tags/esssy/" style="font-size: 16.069760510720062px;" class="tag-cloud-link">esssy</a>
     
-    <a href="/tags/hexo/" style="font-size: 16.367885527552545px;" class="tag-cloud-link">hexo</a>
+    <a href="/tags/hexo/" style="font-size: 12.369910280390418px;" class="tag-cloud-link">hexo</a>
     
-    <a href="/tags/vue-js/" style="font-size: 11.875799293682716px;" class="tag-cloud-link">vue.js</a>
+    <a href="/tags/vue-js/" style="font-size: 19.917053454211455px;" class="tag-cloud-link">vue.js</a>
     
-    <a href="/tags/HTML，CSS，HEXO，Node-js/" style="font-size: 9.56288026990831px;" class="tag-cloud-link">HTML，CSS，HEXO，Node.js</a>
+    <a href="/tags/HTML，CSS，HEXO，Node-js/" style="font-size: 13.047105153794028px;" class="tag-cloud-link">HTML，CSS，HEXO，Node.js</a>
     
-    <a href="/tags/视频/" style="font-size: 8.287823966661147px;" class="tag-cloud-link">视频</a>
+    <a href="/tags/视频/" style="font-size: 17.854429570169785px;" class="tag-cloud-link">视频</a>
     
-    <a href="/tags/article/" style="font-size: 17.914450256833636px;" class="tag-cloud-link">article</a>
+    <a href="/tags/article/" style="font-size: 17.96649141111663px;" class="tag-cloud-link">article</a>
     
-    <a href="/tags/js/" style="font-size: 11.688703281632499px;" class="tag-cloud-link">js</a>
+    <a href="/tags/js/" style="font-size: 17.375392353491px;" class="tag-cloud-link">js</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
@@ -582,7 +643,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
     if(window.commentConfig) {
-      window.commentConfig.id = ''
+      window.commentConfig.id = 'Mon Oct 15 2018 11:20:03 GMT+0800'
       window.commentConfig.owner = 'StarFishing'
       window.commentConfig.repo = 'Comment'
       window.commentConfig.client_id = 'b78dcc1ba9ea057366f1'
@@ -590,7 +651,7 @@
       window.commentConfig.redirect_uri = ''
     } else {
       window.commentConfig = {
-      	id: '',
+      	id: 'Mon Oct 15 2018 11:20:03 GMT+0800',
         owner: 'StarFishing',
         repo: 'Comment',
         client_id: 'b78dcc1ba9ea057366f1',
