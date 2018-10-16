@@ -255,14 +255,12 @@
         </center>
     </div>
     <div class="content-article">
-        <h2 id="vue2-0-过渡效果（transition）"><a href="#vue2-0-过渡效果（transition）" class="headerlink" title="vue2.0 过渡效果（transition）"></a>vue2.0 过渡效果（transition）</h2><h3 id="在进入-离开的过渡中，会有-6-个-class-切换。"><a href="#在进入-离开的过渡中，会有-6-个-class-切换。" class="headerlink" title="在进入/离开的过渡中，会有 6 个 class 切换。"></a>在进入/离开的过渡中，会有 6 个 class 切换。</h3><ol>
-<li><code>v-enter</code>：定义进入过渡的开始状态。在元素被插入之前生效，在元素被插入之后的下一帧移除。</li>
-<li><code>v-enter-active</code>：定义进入过渡生效时的状态。在整个进入过渡的阶段中应用，在元素被插入之前生效，在过渡/动画完成之后移除。这个类可以被用来定义进入过渡的过程时间，延迟和曲线函数。</li>
-<li><code>v-enter-to</code>: <strong>2.1.8版及以上</strong> 定义进入过渡的结束状态。在元素被插入之后下一帧生效 (与此同时 <code>v-enter</code> 被移除)，在过渡/动画完成之后移除。</li>
-<li><code>v-leave</code>: 定义离开过渡的开始状态。在离开过渡被触发时立刻生效，下一帧被移除。</li>
-<li><code>v-leave-active</code>：定义离开过渡生效时的状态。在整个离开过渡的阶段中应用，在离开过渡被触发时立刻生效，在过渡/动画完成之后移除。这个类可以被用来定义离开过渡的过程时间，延迟和曲线函数。</li>
-<li><code>v-leave-to</code>: <strong>2.1.8版及以上</strong> 定义离开过渡的结束状态。在离开过渡被触发之后下一帧生效 (与此同时 <code>v-leave</code> 被删除)，在过渡/动画完成之后移除。</li>
-</ol>
+        <h2 id="vue2-0-过渡效果（transition）"><a href="#vue2-0-过渡效果（transition）" class="headerlink" title="vue2.0 过渡效果（transition）"></a>vue2.0 过渡效果（transition）</h2><h3 id="在进入-离开的过渡中，会有-6-个-class-切换。"><a href="#在进入-离开的过渡中，会有-6-个-class-切换。" class="headerlink" title="在进入/离开的过渡中，会有 6 个 class 切换。"></a>在进入/离开的过渡中，会有 6 个 class 切换。</h3><p>1、<code>v-enter</code>：定义进入过渡的开始状态。在元素被插入之前生效，在元素被插入之后的下一帧移除。</p>
+<p>2、<code>v-enter-active</code>：定义进入过渡生效时的状态。在整个进入过渡的阶段中应用，在元素被插入之前生效，在过渡/动画完成之后移除。这个类可以被用来定义进入过渡的过程时间，延迟和曲线函数。</p>
+<p>3、<code>v-enter-to</code>: <strong>2.1.8版及以上</strong> 定义进入过渡的结束状态。在元素被插入之后下一帧生效 (与此同时 <code>v-enter</code> 被移除)，在过渡/动画完成之后移除。</p>
+<p>4、<code>v-leave</code>: 定义离开过渡的开始状态。在离开过渡被触发时立刻生效，下一帧被移除。</p>
+<p>5、<code>v-leave-active</code>：定义离开过渡生效时的状态。在整个离开过渡的阶段中应用，在离开过渡被触发时立刻生效，在过渡/动画完成之后移除。这个类可以被用来定义离开过渡的过程时间，延迟和曲线函数。</p>
+<p>6、<code>v-leave-to</code>: <strong>2.1.8版及以上</strong> 定义离开过渡的结束状态。在离开过渡被触发之后下一帧生效 (与此同时 <code>v-leave</code> 被删除)，在过渡/动画完成之后移除。</p>
 <p><img src="http://pczr1g7oj.bkt.clouddn.com/example%5Cimage%5Ctransition.png" alt=""></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">*声明$取父元素的类，即要过渡的元素需要父元素的包裹，也就是transition标签；</span><br><span class="line">*/</span><br><span class="line">&amp;.fade-enter-to/*过渡完成后的状态，在过渡效果持续时间结束后下一帧移除*/</span><br><span class="line">        opacity: 1</span><br><span class="line">        background: rgba(7, 17, 27, .8)</span><br><span class="line">    &amp;.fade-enter,  &amp;.fade-leave-to/*过渡开始进入以及离开后的状态*/</span><br><span class="line">        opacity: 0</span><br><span class="line">        background: rgba(7, 17, 27, 0)</span><br><span class="line">    &amp;.fade-leave/*过渡从当前开始离开的状态，一般与fade-enter-to保持一致*/</span><br><span class="line">        opacity: 1</span><br><span class="line">        background: rgba(7, 17, 27, .8)</span><br><span class="line">    &amp;.fade-enter-active/*定义过渡从开始到完全进入的持续时间*/</span><br><span class="line">       transition: all .7s ease</span><br><span class="line">    &amp;.fade-leave-active/*定义过渡从开始离开到完全离开的持续时间*/</span><br><span class="line">       transition: all .7s ease</span><br><span class="line">    background-color: rgba(7, 17, 27, .8)</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;transition name=&quot;fade&quot;&gt;</span><br><span class="line">&lt;div v-if=&quot;show&quot;&gt;</span><br><span class="line">&lt;p&gt;你好啊&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/transition&gt;</span><br></pre></td></tr></table></figure>
@@ -443,13 +441,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/10/15/Vue.js中data,props和computed数据/">Vue.js中data,props和computed数据</a>
+                    <a href="/2018/08/01/Flower Day/">Flower Day</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/08/01/Flower Day/">Flower Day</a>
+                    <a href="/2018/10/15/Vue.js中data,props和computed数据/">Vue.js中data,props和computed数据</a>
                 </span>
             </li>
             
@@ -504,29 +502,29 @@
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/HTML，CSS，HEXO，Node-js/" style="font-size: 17.753530659952204px;" class="tag-cloud-link">HTML，CSS，HEXO，Node.js</a>
+    <a href="/tags/HTML，CSS，HEXO，Node-js/" style="font-size: 10.729892912112765px;" class="tag-cloud-link">HTML，CSS，HEXO，Node.js</a>
     
-    <a href="/tags/视频/" style="font-size: 15.95666526648543px;" class="tag-cloud-link">视频</a>
+    <a href="/tags/视频/" style="font-size: 14.886922102498826px;" class="tag-cloud-link">视频</a>
     
-    <a href="/tags/CSS-Sticky-footer/" style="font-size: 12.689868151958505px;" class="tag-cloud-link">CSS Sticky footer</a>
+    <a href="/tags/CSS-Sticky-footer/" style="font-size: 14.712626878507963px;" class="tag-cloud-link">CSS Sticky footer</a>
     
-    <a href="/tags/vue-js/" style="font-size: 15.903312742689682px;" class="tag-cloud-link">vue.js</a>
+    <a href="/tags/mood/" style="font-size: 14.197995094819323px;" class="tag-cloud-link">mood</a>
     
-    <a href="/tags/mood/" style="font-size: 16.55970371789569px;" class="tag-cloud-link">mood</a>
+    <a href="/tags/esssy/" style="font-size: 14.313412983181768px;" class="tag-cloud-link">esssy</a>
     
-    <a href="/tags/esssy/" style="font-size: 11.060458347689497px;" class="tag-cloud-link">esssy</a>
+    <a href="/tags/hexo/" style="font-size: 14.746709178301252px;" class="tag-cloud-link">hexo</a>
     
-    <a href="/tags/hexo/" style="font-size: 18.67344475043405px;" class="tag-cloud-link">hexo</a>
+    <a href="/tags/vue-js/" style="font-size: 10.40122253425207px;" class="tag-cloud-link">vue.js</a>
     
-    <a href="/tags/vue项目开发/" style="font-size: 13.846412250183024px;" class="tag-cloud-link">vue项目开发</a>
+    <a href="/tags/vue项目开发/" style="font-size: 16.448059050000584px;" class="tag-cloud-link">vue项目开发</a>
     
-    <a href="/tags/article/" style="font-size: 8.783264485870806px;" class="tag-cloud-link">article</a>
+    <a href="/tags/article/" style="font-size: 8.788549152301321px;" class="tag-cloud-link">article</a>
     
-    <a href="/tags/js/" style="font-size: 16.258451289356046px;" class="tag-cloud-link">js</a>
+    <a href="/tags/js/" style="font-size: 8.91331261870734px;" class="tag-cloud-link">js</a>
     
-    <a href="/tags/vue2-0用法分析/" style="font-size: 12.105909118574424px;" class="tag-cloud-link">vue2.0用法分析</a>
+    <a href="/tags/vue-transition/" style="font-size: 17.428160357720433px;" class="tag-cloud-link">vue transition</a>
     
-    <a href="/tags/vue-transition/" style="font-size: 16.113238835077176px;" class="tag-cloud-link">vue transition</a>
+    <a href="/tags/vue2-0用法分析/" style="font-size: 11.437893705596618px;" class="tag-cloud-link">vue2.0用法分析</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
