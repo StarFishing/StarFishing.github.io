@@ -12,7 +12,7 @@
     
     
     
-    <title>categories: essay | For You</title>
+    <title>For You</title>
     <link href=”http://starfishing.github.io“ rel=”prefetch” />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -131,7 +131,7 @@
                 
                 
                 
-                <li class="current">
+                <li class="">
                     <a href="/categories">
                         <i class="fa fa-list"></i>分类
                     </a>
@@ -196,19 +196,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-category">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="http://starfishing.github.io">For You</a>
         >
-        <span>目录</span>
+        <span></span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/categories/essay/index.html">essay</a>
+                <a href="/2018/10/20/jQuery/"></a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2018-10-20
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -216,24 +228,56 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/categories/essay/index.html">essay</a>
+                    <a href="/2018/10/20/jQuery/"></a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2018-10-20
+            </p>
+            <p>
+                
+                
+                <i class="fa fa-eye"></i>
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-            <a href="/2018/08/01/Flower Day/">Flower Day</a>
-            <br>
-            
-            <a href="/2018/08/01/hello-world/">IRON MAN</a>
-            <br>
-            
-            
-        </div>
+    <div class="content-article">
+        <hr>
+<p>title: jquery常用方法<br>tags: [jquery方法（一）]</p>
+<h2 id="categories-jquery"><a href="#categories-jquery" class="headerlink" title="categories: jquery"></a>categories: jquery</h2><p>$(“#div”).text(“hello”)//text()方法，读取或设置元素的innerTest，函数没参数即读取</p>
+<p>$(“image1”).attr(“src”,”<a href="http://www.baidu.com&quot;)//attr()方法，读取或者设置元素的属性。当有两个参数时，第二个参数为要设置的" target="_blank" rel="noopener">www.baidu.com&quot;)//attr()方法，读取或者设置元素的属性。当有两个参数时，第二个参数为要设置的</a></p>
+<p>属性值；<br>$(“#link1”).removeAttr(“href”)//移除相应的属性</p>
+<p>$(“#div”).css(“color”,”red”)//设置样式，一个参数为读取样式；</p>
+<p>//创建一个按钮，并且加载div1之后，添加点击事件，用slideUp方法收起div1;</p>
+<p>$(“<input type="button" value="动画">“).insertAfter($div1).click(function(){$div1.slideUp(3000);});</p>
+<p>map()和each()区别</p>
+<p>//map的回调函数参数为index，value。而each相反<br>函数内 return true 相当于 continue，return false 相当于 break；</p>
+<p>过滤器<br>:even//选偶数$(“th:even”).css(“bacground-color”,”grey”)将所有偶数表头变为灰色背景<br>:odd//选奇数</p>
+<p>内容选择器<br>:contains//按内容匹配 ,$(“div:contains(“hello”)”).css(“color”,”grey”)匹配div中文本包含hello的dom元素<br>:has(selector)//参数为选择器，比如p,div,span等；</p>
+<p>属性选择器<br>[attribute]//$(“[class]”)匹配所有包含class属性的元素</p>
+<p>[attribute=value]//$(“[class=’native’]”)匹配所有包含class属性为native的元素</p>
+<p>[attribute!=value]//$(“[id！=4]”)匹配所有id不为4的元素</p>
+<p>[attribute$=value]//$(“[id$=4]”)匹配所有id以4结尾的元素</p>
+<p>[attribute<em>=value]//$(“[id</em>=4]”)匹配所有id包含4的元素</p>
+<p>[attribute^=value]//$(“[id^=4]”)匹配所有id以4开始的元素</p>
+<p>[selector1][selector2][selectorN]//$(“input[id][name$=’man’]”)匹配input元素包含id属性，并且name属性以man结尾的元素</p>
+<p>toggleClass(class)//$(“#p1”).toggleClass(“blue”);如果该元素有blue这个类，则删除该类，如果没有，则添加该类；<br>toggleClass(class,switch);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">	$(document).ready(function()&#123;</span><br><span class="line">		var count=1;</span><br><span class="line">    $(&quot;#div1&quot;).click(function()&#123;</span><br><span class="line">	//单击id为p1的元素，如果后面表达式为true，删除前面的类，否则添加前面的类；</span><br><span class="line">	//$(this).toggleClass(&quot;blue&quot;);//,count++%2==0</span><br><span class="line">	$(this).toggleClass(function()&#123;</span><br><span class="line">		if(count++%2==0)</span><br><span class="line">		&#123;</span><br><span class="line">			$(this).removeAttr(&quot;class&quot;,&quot;bgred&quot;)</span><br><span class="line">			return &quot;blue&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		else </span><br><span class="line">			&#123;</span><br><span class="line">				$(this).removeAttr(&quot;class&quot;,&quot;bgred&quot;)</span><br><span class="line">		    return &quot;bgred&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
     </div>
 </article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -391,7 +435,7 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/10/20/jQuery/"></a>
+                    <a href="/2018/10/15/CSS Sticky footer完美底部布局/">CSS Sticky footer完美底部布局</a>
                 </span>
             </li>
             
@@ -409,7 +453,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/10/15/Vue.js中data,props和computed数据/">Vue.js中data,props和computed数据</a>
+                    <a href="/2018/10/15/Vue项目开发/">vue项目开发-前期了解</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/08/01/hello-world/">IRON MAN</a>
                 </span>
             </li>
             
@@ -431,12 +481,6 @@
                 </span>
             </li>
             
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/10/16/vue-tansition过渡/">vue2.0 过渡效果（transition）</a>
-                </span>
-            </li>
-            
         </ul>
     </div>
 </aside>
@@ -446,43 +490,43 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/categories/essay/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2018/10/20/jQuery/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/categories/essay/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2018/10/20/jQuery/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/categories/essay/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2018/10/20/jQuery/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/视频/" style="font-size: 15.214462362023802px;" class="tag-cloud-link">视频</a>
+    <a href="/tags/视频/" style="font-size: 17.332803646484248px;" class="tag-cloud-link">视频</a>
     
-    <a href="/tags/mood/" style="font-size: 19.023192031573018px;" class="tag-cloud-link">mood</a>
+    <a href="/tags/mood/" style="font-size: 14.082512304306114px;" class="tag-cloud-link">mood</a>
     
-    <a href="/tags/esssy/" style="font-size: 13.13152500722226px;" class="tag-cloud-link">esssy</a>
+    <a href="/tags/esssy/" style="font-size: 17.471709653232175px;" class="tag-cloud-link">esssy</a>
     
-    <a href="/tags/hexo/" style="font-size: 17.275154248692807px;" class="tag-cloud-link">hexo</a>
+    <a href="/tags/hexo/" style="font-size: 19.444812391394496px;" class="tag-cloud-link">hexo</a>
     
-    <a href="/tags/CSS-Sticky-footer/" style="font-size: 18.31471086406568px;" class="tag-cloud-link">CSS Sticky footer</a>
+    <a href="/tags/CSS-Sticky-footer/" style="font-size: 19.34857265770558px;" class="tag-cloud-link">CSS Sticky footer</a>
     
-    <a href="/tags/HTML，CSS，HEXO，Node-js/" style="font-size: 14.072330127858946px;" class="tag-cloud-link">HTML，CSS，HEXO，Node.js</a>
+    <a href="/tags/HTML，CSS，HEXO，Node-js/" style="font-size: 19.633096682697392px;" class="tag-cloud-link">HTML，CSS，HEXO，Node.js</a>
     
-    <a href="/tags/js数组操作方法/" style="font-size: 8.585102928902426px;" class="tag-cloud-link">js数组操作方法</a>
+    <a href="/tags/js数组操作方法/" style="font-size: 8.770626584863908px;" class="tag-cloud-link">js数组操作方法</a>
     
-    <a href="/tags/vue项目开发/" style="font-size: 10.117289449012855px;" class="tag-cloud-link">vue项目开发</a>
+    <a href="/tags/vue项目开发/" style="font-size: 9.55549095682343px;" class="tag-cloud-link">vue项目开发</a>
     
-    <a href="/tags/vue-js/" style="font-size: 12.269742201298836px;" class="tag-cloud-link">vue.js</a>
+    <a href="/tags/vue-js/" style="font-size: 18.662707317019503px;" class="tag-cloud-link">vue.js</a>
     
-    <a href="/tags/article/" style="font-size: 14.757783971301986px;" class="tag-cloud-link">article</a>
+    <a href="/tags/article/" style="font-size: 10.970779614122572px;" class="tag-cloud-link">article</a>
     
-    <a href="/tags/js/" style="font-size: 17.46437339469919px;" class="tag-cloud-link">js</a>
+    <a href="/tags/js/" style="font-size: 14.773533783224359px;" class="tag-cloud-link">js</a>
     
-    <a href="/tags/vue2-0用法分析/" style="font-size: 13.677474384247024px;" class="tag-cloud-link">vue2.0用法分析</a>
+    <a href="/tags/vue2-0用法分析/" style="font-size: 9.209516380961299px;" class="tag-cloud-link">vue2.0用法分析</a>
     
-    <a href="/tags/vue-transition/" style="font-size: 11.809677152172988px;" class="tag-cloud-link">vue transition</a>
+    <a href="/tags/vue-transition/" style="font-size: 16.49095772619402px;" class="tag-cloud-link">vue transition</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
@@ -601,7 +645,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
     if(window.commentConfig) {
-      window.commentConfig.id = ''
+      window.commentConfig.id = 'Sat Oct 20 2018 15:05:20 GMT+0800'
       window.commentConfig.owner = 'StarFishing'
       window.commentConfig.repo = 'Comment'
       window.commentConfig.client_id = 'b78dcc1ba9ea057366f1'
@@ -609,7 +653,7 @@
       window.commentConfig.redirect_uri = ''
     } else {
       window.commentConfig = {
-      	id: '',
+      	id: 'Sat Oct 20 2018 15:05:20 GMT+0800',
         owner: 'StarFishing',
         repo: 'Comment',
         client_id: 'b78dcc1ba9ea057366f1',

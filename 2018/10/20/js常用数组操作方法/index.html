@@ -12,7 +12,7 @@
     
     
     
-    <title>categories: essay | For You</title>
+    <title>js常用数组操作方法 | For You</title>
     <link href=”http://starfishing.github.io“ rel=”prefetch” />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -131,7 +131,7 @@
                 
                 
                 
-                <li class="current">
+                <li class="">
                     <a href="/categories">
                         <i class="fa fa-list"></i>分类
                     </a>
@@ -196,19 +196,38 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-category">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="http://starfishing.github.io">For You</a>
         >
-        <span>目录</span>
+        <span>js常用数组操作方法</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/categories/essay/index.html">essay</a>
+                <a href="/2018/10/20/js常用数组操作方法/">js常用数组操作方法</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/js数组操作方法/">js数组操作方法</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2018-10-20
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -216,24 +235,62 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/categories/essay/index.html">essay</a>
+                    <a href="/2018/10/20/js常用数组操作方法/">js常用数组操作方法</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2018-10-20
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/js数组操作方法/">js数组操作方法</a>
+                
+                
+                
+                <i class="fa fa-eye"></i>
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-            <a href="/2018/08/01/Flower Day/">Flower Day</a>
-            <br>
-            
-            <a href="/2018/08/01/hello-world/">IRON MAN</a>
-            <br>
-            
-            
-        </div>
+    <div class="content-article">
+        <p>indexOf()  方法可返回某个指定的字符串值在字符串中首次出现的位置。</p>
+<p>stringObject.indexOf(searchvalue,fromindex)<br>参数                        描述<br>searchvalue         必需。规定需检索的字符串值。</p>
+<p>fromindex         可选的整数参数。规定在字符串中开始检索的位置。它的合法取值是 0 到 stringObject.length - 1。</p>
+<p>​                              如省略该参数，则将从字符串的首字符开始检索。</p>
+<p>charAt(i);             获取字符串中对应索引的字符</p>
+<p>sort()   方法用于对数组的元素进行排序。arrayObject.sort(sortby),参数可选，规定排序顺序，必须是函数。</p>
+<p>​          如果调用该方法时没有使用参数，将按字母顺序对数组中的元素进行排序，说得更精确点，是按照字符编码的顺序</p>
+<p>​           进行排序。<br>要实现这一点，首先应把数组的元素都转换成字符串（如有必要），以便进行比较。如果想按照其他标准进行排序，</p>
+<p>就需要提供比较函数，该函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。</p>
+<p>比较函数应该具有两个参数 a 和 b，其返回值如下：<br>             若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。<br>             若 a 等于 b，则返回 0。<br>             若 a 大于 b，则返回一个大于 0 的值。</p>
+<p>Object.keys(obj)//obj要返回可枚举的属性的对象。返回值：一个字符串数组，表示给定对象的所有可枚举属性。</p>
+<p>/**const object1 = {<br>  a: ‘somestring’,<br>  b: 42,<br>  c: false<br>};</p>
+<p>console.log(Object.keys(object1));<br>// expected output: Array [“a”, “b”, “c”]<br>**/</p>
+<p>map()/forEach()/filter()</p>
+<p>map() 方法返回一个新数组，数组中的元素为原始数组元素调用函数处理后的值。</p>
+<p>map() 方法按照原始数组元素顺序依次处理元素。<br>注意： map() 不会对空数组进行检测。<br>注意： map() 不会改变原始数组。<br>array.map(function(currentValue,index,arr), thisValue)<br>function(currentValue, index,arr)    必须。函数，数组中的每个元素都会执行这个函数<br>currentValue                        必须。当前元素的值<br>index                                可选。当前元素的索引值<br>arr                                    可选。当前元素属于的数组对象<br>thisValue                            可选。对象作为该执行回调时使用，传递给函数，用作 “this” 的值。如果省略了 thisValue ，”this” 的值为 “undefined”</p>
+<p>//数组去重方法<br>//Set数据结构，它类似于数组，其成员的值都是唯一的，利用Array.from将Set结构转换成数组<br>//方法一,可快速返回去重后的数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function dedupe(arr)</span><br><span class="line">&#123;</span><br><span class="line">	return Array.from(new Set(arr))</span><br><span class="line">&#125;</span><br><span class="line">var arr=[1,2,3,2,2,1,4]</span><br><span class="line">console.log(dedupe(arr));//[1,2,3,4]</span><br></pre></td></tr></table></figure>
+<p>//方法二，可去重，也可用来返回删掉的数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Array.prototype.distinct=function()&#123;</span><br><span class="line">	var arr=this,</span><br><span class="line">	result=[],</span><br><span class="line">	len=arr.length;</span><br><span class="line">	arr.forEach(function(v,i,arr)//也可以利用map,filter方法</span><br><span class="line">	&#123;</span><br><span class="line">		var bool=arr.indexOf(v,i+1);//从传入参数的下一个索引值开始寻找是否存在重复</span><br><span class="line">		if(bool==-1)&#123;</span><br><span class="line">			result.push(v);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line">return result;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">var arr=[1,2,3,2,2,1,4]</span><br><span class="line">console.log(arr.distinct());//[1,2,3,4]</span><br></pre></td></tr></table></figure>
+<p>//查找字符串中出现次数最多的字符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;nininihaoa&quot;;</span><br><span class="line"></span><br><span class="line">var obj= &#123;&#125;;//定义一个存储键值对的对象，存储每个字符和其对应的次数</span><br><span class="line"></span><br><span class="line">for (var i = 0, length = str.length; i &lt; length; i++) &#123;</span><br><span class="line">//获取每个下标对应的字符，charAt函数用来返回索引为i对应的字符	</span><br><span class="line">var char = str.charAt(i);</span><br><span class="line">//判断对象中是否已经存在该字符属性</span><br><span class="line">if (obj[char]) &#123;</span><br><span class="line">    obj[char]++; //次数加1</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    obj[char] = 1; //若第一次出现，将该字符作为属性添加进对象，并且设置属性值即次数记为1</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(obj); //输出的是完整的对象，记录着每一个字符及其出现的次数</span><br><span class="line">//遍历对象，找到出现次数最多的字符的次数</span><br><span class="line">var max = 0;</span><br><span class="line">for (var key in obj) &#123;</span><br><span class="line">if (max &lt; obj[key]) &#123;</span><br><span class="line">max = obj[key]; //max始终储存次数最大的那个</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">for (var key in obj) &#123;</span><br><span class="line">if (obj[key] == max) &#123;</span><br><span class="line">//console.log(key);</span><br><span class="line">console.log(&quot;最多的字符是&quot; + key);</span><br><span class="line">console.log(&quot;出现的次数是&quot; + max);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
     </div>
 </article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = 'js常用数组操作方法'
+    }
+</script>
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -379,13 +436,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/09/02/02/">快把我哥带走</a>
+                    <a href="/2018/08/01/Flower Day/">Flower Day</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/08/01/Flower Day/">Flower Day</a>
+                    <a href="/2018/10/15/CSS Sticky footer完美底部布局/">CSS Sticky footer完美底部布局</a>
                 </span>
             </li>
             
@@ -404,6 +461,12 @@
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2018/10/20/js常用数组操作方法/">js常用数组操作方法</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/10/15/Vue项目开发/">vue项目开发-前期了解</a>
                 </span>
             </li>
             
@@ -431,12 +494,6 @@
                 </span>
             </li>
             
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/10/16/vue-tansition过渡/">vue2.0 过渡效果（transition）</a>
-                </span>
-            </li>
-            
         </ul>
     </div>
 </aside>
@@ -446,43 +503,43 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/categories/essay/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2018/10/20/js常用数组操作方法/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/categories/essay/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2018/10/20/js常用数组操作方法/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/categories/essay/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2018/10/20/js常用数组操作方法/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/视频/" style="font-size: 15.214462362023802px;" class="tag-cloud-link">视频</a>
+    <a href="/tags/视频/" style="font-size: 11.868225632702496px;" class="tag-cloud-link">视频</a>
     
-    <a href="/tags/mood/" style="font-size: 19.023192031573018px;" class="tag-cloud-link">mood</a>
+    <a href="/tags/mood/" style="font-size: 15.49817844780291px;" class="tag-cloud-link">mood</a>
     
-    <a href="/tags/esssy/" style="font-size: 13.13152500722226px;" class="tag-cloud-link">esssy</a>
+    <a href="/tags/esssy/" style="font-size: 12.508080823664997px;" class="tag-cloud-link">esssy</a>
     
-    <a href="/tags/hexo/" style="font-size: 17.275154248692807px;" class="tag-cloud-link">hexo</a>
+    <a href="/tags/hexo/" style="font-size: 11.82340728653267px;" class="tag-cloud-link">hexo</a>
     
-    <a href="/tags/CSS-Sticky-footer/" style="font-size: 18.31471086406568px;" class="tag-cloud-link">CSS Sticky footer</a>
+    <a href="/tags/CSS-Sticky-footer/" style="font-size: 9.756885798633032px;" class="tag-cloud-link">CSS Sticky footer</a>
     
-    <a href="/tags/HTML，CSS，HEXO，Node-js/" style="font-size: 14.072330127858946px;" class="tag-cloud-link">HTML，CSS，HEXO，Node.js</a>
+    <a href="/tags/HTML，CSS，HEXO，Node-js/" style="font-size: 8.505745298820852px;" class="tag-cloud-link">HTML，CSS，HEXO，Node.js</a>
     
-    <a href="/tags/js数组操作方法/" style="font-size: 8.585102928902426px;" class="tag-cloud-link">js数组操作方法</a>
+    <a href="/tags/js数组操作方法/" style="font-size: 12.395956866509263px;" class="tag-cloud-link">js数组操作方法</a>
     
-    <a href="/tags/vue项目开发/" style="font-size: 10.117289449012855px;" class="tag-cloud-link">vue项目开发</a>
+    <a href="/tags/vue项目开发/" style="font-size: 8.656727395795865px;" class="tag-cloud-link">vue项目开发</a>
     
-    <a href="/tags/vue-js/" style="font-size: 12.269742201298836px;" class="tag-cloud-link">vue.js</a>
+    <a href="/tags/vue-js/" style="font-size: 18.858577512810186px;" class="tag-cloud-link">vue.js</a>
     
-    <a href="/tags/article/" style="font-size: 14.757783971301986px;" class="tag-cloud-link">article</a>
+    <a href="/tags/article/" style="font-size: 17.20656213250162px;" class="tag-cloud-link">article</a>
     
-    <a href="/tags/js/" style="font-size: 17.46437339469919px;" class="tag-cloud-link">js</a>
+    <a href="/tags/js/" style="font-size: 17.194431035205785px;" class="tag-cloud-link">js</a>
     
-    <a href="/tags/vue2-0用法分析/" style="font-size: 13.677474384247024px;" class="tag-cloud-link">vue2.0用法分析</a>
+    <a href="/tags/vue2-0用法分析/" style="font-size: 14.543486255891015px;" class="tag-cloud-link">vue2.0用法分析</a>
     
-    <a href="/tags/vue-transition/" style="font-size: 11.809677152172988px;" class="tag-cloud-link">vue transition</a>
+    <a href="/tags/vue-transition/" style="font-size: 9.310901429673919px;" class="tag-cloud-link">vue transition</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
@@ -601,7 +658,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
     if(window.commentConfig) {
-      window.commentConfig.id = ''
+      window.commentConfig.id = 'Sat Oct 20 2018 15:02:08 GMT+0800'
       window.commentConfig.owner = 'StarFishing'
       window.commentConfig.repo = 'Comment'
       window.commentConfig.client_id = 'b78dcc1ba9ea057366f1'
@@ -609,7 +666,7 @@
       window.commentConfig.redirect_uri = ''
     } else {
       window.commentConfig = {
-      	id: '',
+      	id: 'Sat Oct 20 2018 15:02:08 GMT+0800',
         owner: 'StarFishing',
         repo: 'Comment',
         client_id: 'b78dcc1ba9ea057366f1',
