@@ -4075,4 +4075,5 @@ a:hover {
 #music{
   cursor: pointer;
   z-index: 1000;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
