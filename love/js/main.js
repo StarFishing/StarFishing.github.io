@@ -20,9 +20,9 @@ tips.fadeIn();
 function auto()
 {
     var timer=setInterval(function(){
-    text.hide();
+    tips.hide();
     text.text(textinfomation[count1]);
-    text.fadeIn(1000);
+    tips.fadeIn(1000);
     count1=randomNum(0,textinfomation.length);
     //count1++;
     flag++;
