@@ -50,7 +50,9 @@
 					<div id="elapseClock"></div>
 				</div>
 				<div id="loveu">
-					永远爱你Ｉ Lᵒᵛᵉᵧₒᵤ❤<br/>
+					永远爱你<span id="music" style="color: rgb(215, 157, 69)">Ｉ Lᵒᵛᵉᵧₒᵤ❤</span><br/>
+					 <iframe id="play" src="" style="display: none">
+    				 </iframe>
 					<div class="signature">- 肖先生</div>
 				</div>
 			</div>
@@ -135,7 +137,17 @@ together.setHours(20);
 together.setMinutes(0);
 together.setSeconds(0);
 together.setMilliseconds(0);
-
+var music=$("#music");
+var paly=$("#play");
+var flag=true;
+var src="http://music.163.com/song/media/outer/url?id=488953797.mp3";
+music.click(function(){
+	if(flag)
+		play.src=src;
+	else
+		play.src="";
+	flag=!flag;
+});
 if (!document.createElement('canvas').getContext) {
 	var msg = document.createElement("div");
 	msg.id = "errorMsg";
@@ -148,7 +160,7 @@ if (!document.createElement('canvas').getContext) {
 } else {
 	setTimeout(function () {
 		startHeartAnimation();
-	}, 5000);
+	}, 20);
 
 	timeElapse(together);
 	setInterval(function () {
