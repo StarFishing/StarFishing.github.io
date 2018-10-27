@@ -12,7 +12,7 @@
     
     
     
-    <title>分类 | For You</title>
+    <title>浏览器缓存 | For You</title>
     <link href=”http://starfishing.github.io“ rel=”prefetch” />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -131,7 +131,7 @@
                 
                 
                 
-                <li class="current">
+                <li class="">
                     <a href="/categories">
                         <i class="fa fa-list"></i>分类
                     </a>
@@ -196,19 +196,38 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-categories">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="http://starfishing.github.io">For You</a>
         >
-        <span>目录</span>
+        <span>浏览器缓存</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/categories">目录集合</a>
+                <a href="/2018/10/27/浏览器缓存/">浏览器缓存</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/缓存/">缓存</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2018-10-27
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -216,39 +235,74 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/categories">目录集合</a>
+                    <a href="/2018/10/27/浏览器缓存/">浏览器缓存</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2018-10-27
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/缓存/">缓存</a>
+                
+                
+                
+                <i class="fa fa-eye"></i>
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-            <a href="/categories/工具/">工具</a>
-            <br>
-            
-            <a href="/categories/CSS/">CSS</a>
-            <br>
-            
-            <a href="/categories/js/">js</a>
-            <br>
-            
-            <a href="/categories/vue/">vue</a>
-            <br>
-            
-            <a href="/categories/缓存/">缓存</a>
-            <br>
-            
-            <a href="/categories/javascript/">javascript</a>
-            <br>
-            
-            <a href="/categories/create/">create</a>
-            <br>
-            
-            
-        </div>
+    <div class="content-article">
+        <h3 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h3><p>1、因为HTTP请求无状态，所以需要cookie去维持客户端状态</p>
+<p>2、过期时间 expire</p>
+<p>3、cookie的生成方式</p>
+<p>​     （一） http response header中的set-cookie</p>
+<p>​     （二） js中可以通过document.cookie可以读写cookie</p>
+<p>4、仅仅作为浏览器存储（大小4KB左右，能力被localstorage替代）</p>
+<p>5、cookie中在相关域名下面 —— cdn的流量损耗</p>
+<p>6、httponly</p>
+<h3 id="LocalStorage"><a href="#LocalStorage" class="headerlink" title="LocalStorage"></a>LocalStorage</h3><p>1、HTML5设计出来专门用于浏览器存储的</p>
+<p>2、大小为5M左右</p>
+<p>3、仅在客户端使用，不和服务端进行通信</p>
+<p>4、接口封装较好</p>
+<p>5、浏览器本地缓存方案</p>
+<h3 id="SessionStorage"><a href="#SessionStorage" class="headerlink" title="SessionStorage"></a>SessionStorage</h3><p>1、会话级别的浏览器存储</p>
+<p>2、大小为5M左右</p>
+<p>3、仅在客户端使用，不和服务端进行通信</p>
+<p>4、接口封装较好</p>
+<p>5、对于表单信息的维护</p>
+<h3 id="IndexedDB"><a href="#IndexedDB" class="headerlink" title="IndexedDB"></a>IndexedDB</h3><p>1、IndexedDB 是一种低级API，用于客户端存储大量结构化数据。该API使用索引来实现对该数据</p>
+<p>的高性能搜索。虽然 Web Storage 对于存储较少量的数据很有用，但对于存储更大量的结构化数据</p>
+<p>来说，这种方法不太有用。IndexedDB提供了一个解决方案。</p>
+<p>2、为应用创建离线版本</p>
+<h3 id="PWA"><a href="#PWA" class="headerlink" title="PWA"></a>PWA</h3><p>PWA (Progressive Web Apps) 是一种 Web App 新模型，并不是具体指某一种前沿的技术或者某一</p>
+<p>个单一的知识点，我们从英文缩写来看就能看出来，这是一个渐进式的 Web App，是通过一系列新</p>
+<p>的 Web 特性，配合优秀的 UI 交互设计，逐步的增强 Web App 的用户体验。 </p>
+<p>1、可靠：在没有网络的环境中也能提供基本的页面访问，而不会出现“未连接到互联网”的页面。 </p>
+<p>2、快速：针对网页渲染及网络数据访问有较好优化。</p>
+<p>3、融入（Engaging）：应用可以被增加到手机桌面，并且和普通应用一样有全屏、推送等特性。</p>
+<p>4、lighthouse(<a href="https://lavas.baidu.com/doc-assets/lavas/vue/more/downloads/lighthouse_2.1.0_0.zip" target="_blank" rel="noopener">下载地址</a>) </p>
+<p>​      <a href="https://lavas.baidu.com/doc-assets/lavas/vue/more/downloads/lighthouse_2.1.0_0.zip" target="_blank" rel="noopener">https://lavas.baidu.com/doc-assets/lavas/vue/more/downloads/lighthouse_2.1.0_0.zip</a> </p>
+<h3 id="Service-Worker"><a href="#Service-Worker" class="headerlink" title="Service Worker"></a>Service Worker</h3><p>Service Worker 是一个脚本，浏览器独立于当前网页，将其在后台运行,为实现一些不依赖页面或者</p>
+<p>用户交互的特性打开了一扇大门。在未来这些特性将包括推送消息,背景后台同步， geofencing（地</p>
+<p>理围栏定位），但它将推出的第一个首要特性，就是拦截和处理网络请求的能力，包括以编程方式</p>
+<p>来管理被缓存的响应。</p>
+
     </div>
 </article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = '浏览器缓存'
+    }
+</script>
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -461,37 +515,37 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/categories/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2018/10/27/浏览器缓存/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/categories/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2018/10/27/浏览器缓存/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/categories/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2018/10/27/浏览器缓存/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/HTML，CSS，HEXO，Node-js/" style="font-size: 8.471141588534646px;" class="tag-cloud-link">HTML，CSS，HEXO，Node.js</a>
+    <a href="/tags/HTML，CSS，HEXO，Node-js/" style="font-size: 11.608514552900598px;" class="tag-cloud-link">HTML，CSS，HEXO，Node.js</a>
     
-    <a href="/tags/CSS-Sticky-footer/" style="font-size: 16.79005488512933px;" class="tag-cloud-link">CSS Sticky footer</a>
+    <a href="/tags/CSS-Sticky-footer/" style="font-size: 14.43682601858038px;" class="tag-cloud-link">CSS Sticky footer</a>
     
-    <a href="/tags/js数组操作方法/" style="font-size: 12.439548623350866px;" class="tag-cloud-link">js数组操作方法</a>
+    <a href="/tags/js数组操作方法/" style="font-size: 9.86176798508436px;" class="tag-cloud-link">js数组操作方法</a>
     
-    <a href="/tags/vue-js/" style="font-size: 17.64065466887707px;" class="tag-cloud-link">vue.js</a>
+    <a href="/tags/vue-js/" style="font-size: 9.727545060279791px;" class="tag-cloud-link">vue.js</a>
     
-    <a href="/tags/缓存/" style="font-size: 14.195966900113937px;" class="tag-cloud-link">缓存</a>
+    <a href="/tags/缓存/" style="font-size: 17.433807516717714px;" class="tag-cloud-link">缓存</a>
     
-    <a href="/tags/vue-transition/" style="font-size: 13.427659862456792px;" class="tag-cloud-link">vue transition</a>
+    <a href="/tags/vue-transition/" style="font-size: 19.579282757800918px;" class="tag-cloud-link">vue transition</a>
     
-    <a href="/tags/vue项目开发/" style="font-size: 19.521376548870265px;" class="tag-cloud-link">vue项目开发</a>
+    <a href="/tags/vue项目开发/" style="font-size: 18.713013668749717px;" class="tag-cloud-link">vue项目开发</a>
     
-    <a href="/tags/js/" style="font-size: 18.352424993209983px;" class="tag-cloud-link">js</a>
+    <a href="/tags/js/" style="font-size: 10.899070169063652px;" class="tag-cloud-link">js</a>
     
-    <a href="/tags/jquery方法（一）/" style="font-size: 11.849711446676455px;" class="tag-cloud-link">jquery方法（一）</a>
+    <a href="/tags/jquery方法（一）/" style="font-size: 10.950345706831799px;" class="tag-cloud-link">jquery方法（一）</a>
     
-    <a href="/tags/vue2-0用法分析/" style="font-size: 15.93969940564638px;" class="tag-cloud-link">vue2.0用法分析</a>
+    <a href="/tags/vue2-0用法分析/" style="font-size: 14.010052919049187px;" class="tag-cloud-link">vue2.0用法分析</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
@@ -610,7 +664,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
     if(window.commentConfig) {
-      window.commentConfig.id = 'Thu Aug 02 2018 20:39:54 GMT+0800'
+      window.commentConfig.id = 'Sat Oct 27 2018 08:20:28 GMT+0800'
       window.commentConfig.owner = 'StarFishing'
       window.commentConfig.repo = 'Comment'
       window.commentConfig.client_id = 'b78dcc1ba9ea057366f1'
@@ -618,7 +672,7 @@
       window.commentConfig.redirect_uri = ''
     } else {
       window.commentConfig = {
-      	id: 'Thu Aug 02 2018 20:39:54 GMT+0800',
+      	id: 'Sat Oct 27 2018 08:20:28 GMT+0800',
         owner: 'StarFishing',
         repo: 'Comment',
         client_id: 'b78dcc1ba9ea057366f1',
