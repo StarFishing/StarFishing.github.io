@@ -110,9 +110,6 @@ body{
     font-weight: normal;
     font-family: fantasy;
 }
-.Cinterface button:last-child{
-    margin-right: 0;
-}
 .Cinterface .result{
     position: fixed;
     background-color: #3fa03f;
