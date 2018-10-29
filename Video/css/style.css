@@ -76,16 +76,14 @@ body{
     background-color: #a7a8ae9e;
     color: #151514;
     margin-left: 2%;
-    font-size: 18px;
-    /* font-weight: 700; */
-    font-family: fantasy;
+    font-size: 15px;
+    font-family: sans-serif;
     outline: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .Cinterface{
     margin-top: 60px;
     padding: 10px;
-    /* font-size: 0; */
 }
 .Cinterface .title{
     padding: 3px;
@@ -95,7 +93,6 @@ body{
     margin-bottom: 10px;
     vertical-align: top;
     height: 22px;
-   /*  font-size: 15px; */
     display: inline-block;
 }
 .Cinterface .button{
@@ -106,9 +103,7 @@ body{
     font-size: 16px;
     margin-bottom: 10px;
     margin-left: 0;
-    margin-right: 5px;
-    /* font-weight: normal;
-    font-family: fantasy; */
+    margin-right: 1px;
 }
 .Cinterface .result{
     position: fixed;
