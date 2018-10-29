@@ -1,4 +1,5 @@
 $(function(){
+    // var wrapper=$("wrapper");
     var input=$(".text");
     var button=$(".search .button");
     var interface=$(".Cinterface .button");
@@ -39,7 +40,6 @@ $(function(){
         else
         content.text("接口"+url+"更换成功");
         remaind.slideDown();
-console.log(content.text()+"  "+href);
     });
     function getcount(num){
         if(num>2)
