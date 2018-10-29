@@ -68,7 +68,7 @@ body{
     margin-left: 10px;
 }
 .button{
-display: inline-block;
+    display: inline-block;
     width: 15%;
     height: 40px;
     border-radius: 10px;
@@ -77,7 +77,7 @@ display: inline-block;
     color: #151514;
     margin-left: 2%;
     font-size: 15px;
-    font-family: Comic Sans MS;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     outline: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
