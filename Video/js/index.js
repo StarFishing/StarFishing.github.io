@@ -2,6 +2,7 @@ $(function(){
     // var wrapper=$("wrapper");
     var input=$(".text");
     var button=$(".search .button");
+    var text=$('.interface .text');
     var interface=$(".Cinterface .button");
     var remaind=$(".remaind");
     var know=$(".know");
@@ -10,6 +11,7 @@ $(function(){
     var href="http://jqaaa.com/jq3/?url=&url=";
     var textinner=["我查个锤子，你都没输网址","搞毛啊，都不输入","又点人家，快说想看什么"];
     var count=0;
+    var width=0;
     remaind.hide();
     know.click(function(){
         remaind.slideUp();
@@ -46,4 +48,17 @@ $(function(){
             num=0;
         return num;
     }
+    function resize(){
+        width=$(window).width();
+        if(width<340)
+        {
+            text.text("如果找不到视频要记得换个接口试试ლ(°◕‵ƹ′◕ლ)");
+        }
+        else
+        {
+            text.text("如果找不到视频要记得换个接口试试，不行的话联系我呦ლ(°◕‵ƹ′◕ლ)");
+        }
+    }
+    resize();
+    $(window).on('resize',resize);
 });
