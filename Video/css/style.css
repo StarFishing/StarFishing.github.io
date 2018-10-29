@@ -15,9 +15,28 @@ body{
     margin: 0 15px 10px 10px;
     text-align: center;
     position: relative;
+
+}
+@media screen and (min-width: 700px){
+    .remaind{
+    height: 100px;
+    line-height: 100px;
+}
+    
+}
+@media screen and (min-width: 700px){
+    .search{
+        margin-top: 50px;
+    }
 }
 .content{
     display: inline-block;
+}
+@media screen and (min-width: 700px){
+    .content{
+         position: relative;
+         bottom: 10px;
+    }
 }
 .know{
     display: inline-block;
@@ -50,7 +69,8 @@ body{
     padding: 2px 0;
     background-color: #a7a8ae9e;
     color: #151514;
-    margin-left: 10px;
+    /* margin-left: 10px; */
+    margin-left: 2%;
     font-size: 20px;
     font-family: fantasy;
     outline: none;
@@ -64,6 +84,8 @@ body{
     padding: 3px;
     border-bottom: 1px solid;
     border-top: 1px solid;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 .Cinterface .button{
     width: 80px;
@@ -71,6 +93,9 @@ body{
     text-align: center;
     border-radius: 5px;
     font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 10px;
 }
 .Cinterface .result{
     position: fixed;
@@ -138,10 +163,9 @@ color: #222121;
 #animate {
     height: 480px;
     width: 320px;
-    position: absolute;
+    position: relative;
     transform: scale(0.5);
     top: -130px;
-    left: 40px;
 }
 
 #animate {
