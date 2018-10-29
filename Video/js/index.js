@@ -5,7 +5,7 @@ $(function(){
     var remaind=$(".remaind");
     var know=$(".know");
     var content=$(".content");
-    var interfaceUrl=["http://jx.598110.com/v/3.php?url=","http://www.1717yun.com/jx/ty.php?url="];
+    var interfaceUrl=["http://jqaaa.com/jq3/?url=&url=","http://jx.598110.com/v/3.php?url=","http://www.1717yun.com/jx/ty.php?url="];
     var href="http://jqaaa.com/jq3/?url=&url=";
     var textinner=["我查个锤子，你都没输网址","搞毛啊，都不输入","又点人家，快说想看什么"];
     var count=0;
@@ -23,19 +23,23 @@ $(function(){
              remaind.slideDown();
         }
         else
-        {
-            var url=href+text
+        {   remaind.slideUp();
+            setTimeout(function(){
+            var url=href+text;
              // window.location.href = 'http://jqaaa.com/jq3/?url=&url='+text;
              window.open(url);
+            },500)  
         }
     });
     interface.click(function(){
         remaind.slideUp();
         var url=$(this).attr("id");
-        href=interfaceUrl[url-1];
+        href=interfaceUrl[url];
+        if(url=="0"){content.text("已更换默认接口");}
+        else
         content.text("接口"+url+"更换成功");
         remaind.slideDown();
-
+console.log(content.text()+"  "+href);
     });
     function getcount(num){
         if(num>2)
