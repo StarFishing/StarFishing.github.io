@@ -108,7 +108,7 @@ body{
     font-weight: normal;
     font-family: fantasy;
 }
-.Cinterface .button:last-child{
+.Cinterface button:last-child{
     margin-right: 0;
 }
 .Cinterface .result{
