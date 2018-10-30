@@ -24,6 +24,11 @@ body{
     position: relative;
 
 }
+.layout{
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
 @media screen and (min-width: 740px){
     .remaind{
     height: 100px;
@@ -31,9 +36,18 @@ body{
 }
     
 }
-@media screen and (min-width: 740px){
+@media screen and (min-width: 600px){
     .search{
+        width: 80%;
+        margin: 0 auto;
         margin-top: 50px;
+    }
+}
+@media screen and (min-width: 800px){
+    .search{
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 80px;
     }
 }
 .content{
@@ -132,14 +146,27 @@ body{
     bottom: 0;
     box-sizing: border-box;
     height: 60px;
+    width: 100%;
+}
+.interface .footer{
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
 }
 .interface .warnning{
 display: inline-block;
+vertical-align: bottom
 }
 .interface .text{
 display: inline-block;
 border: none;
 color: #222121;
+}
+@media screen and (min-width: 640px){
+ .interface .text{
+    width: auto;
+    line-height: 40px;
+}
 }
 #animate > ol {
     list-style: none;
