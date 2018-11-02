@@ -103,27 +103,16 @@
             },//[可选],video currenttime回调;
             onStart:function(){
                 var ss=document.getElementById('video');
-                ss.addEventListener('touchmove', function(e) {
-
-                　　e.stopPropagation();//阻止默认事件
-                　　e.preventDefault();//阻止冒泡
-                     if (e.targetTouches.length >=2){
-                        return;
-                     } 
-                    },{ passive: false });
+         ss.addEventListener('touchstart', function (event) {
+              if (event.touches.length > 1) {
+                event.preventDefault();
+              }
+            }, false);
                 document.getElementById('loading').style.display='none';
                 console.log('video start');
             },//[可选],video第一个画面出现回调;
             onEnd:function(){
-                 var ss=document.getElementById('video');
-                ss.removeEventListener('touchmove', function(e) {
-
-                　　e.stopPropagation();//阻止默认事件
-                　　e.preventDefault();//阻止冒泡
-                     if (e.targetTouches.length >=2){
-                        return;
-                     } 
-                    },{ passive: false });
+                
                 document.getElementById('end').style.display='block';
                 console.log('video end');
             }//[可选],video播放完成回调;
