@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
    <meta charset="utf-8">
-    <meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
     <meta name="Copyright" content="Copyright (c) 2017-2018 xlstar">
@@ -18,8 +18,8 @@
             padding: 0;
             width: 100%;
             height: 100%;
-           /*  overflow: hidden;
- */
+            overflow: hidden;
+
         }
         /* .video-pop{width:100%;height:100%;background:#000;position:fixed;top:0;left:0;z-index:998;display:none;}
         .video-pop .video{display:block;width:100%;height:100%;position:relative;}
@@ -74,7 +74,7 @@
 5.view-width="400" 目标宽 默认"400";
 6.view-height="400" 目标高 默认"400";
 -->
-   <div view-mode="h"  view-rotation="auto" view-scale="width" view-width="426" view-height="240">
+<div view-mode="h"  view-rotation="auto" view-scale="height" view-width="426" view-height="240" >
    <!--  <div view-mode="h"  view-rotation="auto" view-scale="width" view-width="426" view-height="240" > -->
     <div class="mask" id="1">
         <button type="button" class="button" onclick="start()">开始</button>
@@ -88,10 +88,8 @@
           <button type="button" class="button" onclick="start2()">继续</button>
       </div>
   </div>
-  <span id="stop" style="width: 40px;height: 40px;float:right;bottom:40px;position: fixed;display: none;background: red" onclick="videoPlayer.currentTimeAndPlay=235">点我结束本视频</span>
   <img src="17.jpg" alt="" style="width: 100%;display: none" id="4">
 </div>
-
 <script>
 function start(){
     var mask=document.getElementById('1');
@@ -129,24 +127,11 @@ var videoPlayer=new MMD.VideoPlayer(
                   break;
           }
       },//[可选],video currenttime回调;
-      onStart:function(){ 
-        document.body.addEventListener('touchmove', function(e) {
-
-　　e.stopPropagation();//阻止默认事件
-　　e.preventDefault();//阻止冒泡
-},{ passive: false });
-                     var stop=document.getElementById('stop');
-                     stop.style.display="block";
-
+      onStart:function(){                
           console.log('video start');
           starttime();
       },//[可选],video第一个画面出现回调;
       onEnd:function(){
-        document.body.removeEventListener('touchmove', function(e) {
-
-　　e.stopPropagation();//阻止默认事件
-　　e.preventDefault();//阻止冒泡
-},{ passive: false });
         if(videoPlayer.src===src2)
         {
             var end=document.getElementById('4');
