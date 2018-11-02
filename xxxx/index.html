@@ -76,6 +76,15 @@
 
 <script>
     var src='http://pczr1g7oj.bkt.clouddn.com/Alan%20Walker,Au%EF%BC%8FRa,Tomine%20Harket%20-%20Darkside.mp4';
+
+    var lastTouchEnd = 0;
+document.documentElement.addEventListener('touchend', function (event) {
+  var now = Date.now();
+  if (now - lastTouchEnd <= 300) {
+    event.preventDefault();
+  }
+  lastTouchEnd = now;
+}, false);
     document.body.addEventListener('touchmove', function(e) {
 
 　　e.stopPropagation();//阻止默认事件
@@ -103,9 +112,9 @@
             },//[可选],video currenttime回调;
             onStart:function(){
                 var ss=document.getElementById('video');
-         ss.addEventListener('touchstart', function (event) {
-              if (event.touches.length > 1) {
-                event.preventDefault();
+         ss.addEventListener('touchstart', function (e) {
+              if (e.targetTouches.length > 1) {
+                e.preventDefault();
               }
             }, false);
                 document.getElementById('loading').style.display='none';
