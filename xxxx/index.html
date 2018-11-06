@@ -117,6 +117,10 @@ document.documentElement.addEventListener('touchend', function (event) {
                 e.preventDefault();
               }
             }, false);
+         ss.addEventListener('gesturestart', function (event) {
+          event.preventDefault();
+        },false);
+      
                 document.getElementById('loading').style.display='none';
                 console.log('video start');
             },//[可选],video第一个画面出现回调;
