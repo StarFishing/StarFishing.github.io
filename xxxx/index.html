@@ -96,7 +96,7 @@ document.documentElement.addEventListener('touchend', function (event) {
           if (event.targetTouches.length > 1) {
                 event.preventDefault();
               }
-        },false);
+        });
     var videoPlayer=new MMD.VideoPlayer(
         {
             videoElement:document.getElementById('video'),//[必填],video元素;
@@ -124,9 +124,9 @@ document.documentElement.addEventListener('touchend', function (event) {
                 e.preventDefault();
               }
             }, false);
-         ss.addEventListener('gesturestart', function (event) {
-          event.preventDefault();
-        },false);
+        //  ss.addEventListener('gesturestart', function (event) {
+        //   event.preventDefault();
+        // },false);
       
                 document.getElementById('loading').style.display='none';
                 console.log('video start');
