@@ -90,6 +90,13 @@ document.documentElement.addEventListener('touchend', function (event) {
 　　e.stopPropagation();//阻止默认事件
 　　e.preventDefault();//阻止冒泡
 },{ passive: false });
+
+    document.body.addEventListener('gesturestart', function (event) {
+          event.preventDefault();
+          if (event.targetTouches.length > 1) {
+                event.preventDefault();
+              }
+        },false);
     var videoPlayer=new MMD.VideoPlayer(
         {
             videoElement:document.getElementById('video'),//[必填],video元素;
