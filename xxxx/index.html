@@ -67,6 +67,8 @@
     <div style="position: absolute;">
         <video id="video" width="426" height="240" style="display:none;"></video>
     </div>
+    <div id="mask" style="display: none;width: 100%;height: 100vh;background-color: transparent"> 
+    </div>
     <div id="end" class="compatibleStyle" style="position: absolute;display: none;">
         <img style="width: 100%;height: 400px" src="http://game.gtimg.cn/images/tgideas/act/a20170330mmdVideoPlayer/videoPlayerDemo/mmd_videoPlayerAndPlug_v_end.jpg">
     </div>
@@ -91,12 +93,12 @@ document.documentElement.addEventListener('touchend', function (event) {
 　　e.preventDefault();//阻止冒泡
 },{ passive: false });
 
-    document.body.addEventListener('gesturestart', function (event) {
-          event.preventDefault();
-          if (event.targetTouches.length > 1) {
-                event.preventDefault();
-              }
-        });
+    // document.body.addEventListener('gesturestart', function (event) {
+    //       event.preventDefault();
+    //       if (event.targetTouches.length > 1) {
+    //             event.preventDefault();
+    //           }
+    //     });
     var videoPlayer=new MMD.VideoPlayer(
         {
             videoElement:document.getElementById('video'),//[必填],video元素;
@@ -118,6 +120,8 @@ document.documentElement.addEventListener('touchend', function (event) {
                 }
             },//[可选],video currenttime回调;
             onStart:function(){
+                var mask=document.getElementById('mask');
+                mask.style.display="block";
                 var ss=document.getElementById('video');
          ss.addEventListener('touchstart', function (e) {
               if (e.targetTouches.length > 1) {
@@ -132,7 +136,8 @@ document.documentElement.addEventListener('touchend', function (event) {
                 console.log('video start');
             },//[可选],video第一个画面出现回调;
             onEnd:function(){
-                
+                var mask=document.getElementById('mask');
+                mask.style.display="none";
                 document.getElementById('end').style.display='block';
                 console.log('video end');
             }//[可选],video播放完成回调;
