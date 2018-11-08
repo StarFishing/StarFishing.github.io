@@ -88,12 +88,13 @@
                 // 调用Canvas2Image插件
                 var img = Canvas2Image.convertToImage(canvas, canvasWidth, canvasHeight);
                 // 渲染图片
-                // $(".need").html("");
-                // $(".need").after(img);
+                $(".need").html("");
+                $(".need").after(img);
                 // 保存
                     let type = "png"; //图片类型
                     let w = $(window).width(); //图片宽度
-                    let h = $(window).height(); //图片高度
+                    // let h = $(window).height(); //图片高度
+                    let h = 400;
                     let f = "DNF"; //图片文件名
                     // w = (w === '') ? canvasWidth : w; //判断输入宽高是否为空，为空时保持原来的值
                     // h = (h === '') ? canvasHeight : h;
