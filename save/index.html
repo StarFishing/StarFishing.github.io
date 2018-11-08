@@ -11,7 +11,8 @@
                 width: 100%;
                 min-height: 100%;
                 height: 100vh;
-                background: linear-gradient(#3793b6, #c993d3);
+                /* background: linear-gradient(#3793b6, #c993d3); */
+                background-color: #a799ac;
                 text-align: center;
         }
         .text{
@@ -23,12 +24,13 @@
             outline: none;
         }
         .save, .picture{
-            border-radius: 10px;
-            border: none;
-            width: 40px;
-            height: 25px;
-            background: #9cd8b1;
-            outline: none;
+                border-radius: 10px;
+    border: none;
+    width: 60px;
+    padding: 0;
+    height: 25px;
+    background: #9cd8b1;
+    outline: none;
         }
         .title{
             /* margin-top: 100px; */
@@ -39,20 +41,21 @@
                  background: linear-gradient(#3793b6, #c993d3);
         }
 img{
+    margin-top: 50px;
     width: 100%;
     height: 200px;
 }
     </style>
-}
+
 </head>
 <body style="padding: 0;margin: 0;">
 <div class="bg">
-    <input type="input" name="姓名" class="text">
-    <button type="button" class="save">保存</button>
-    <button type="button" class="picture">图片</button>
+    <input type="input" name="姓名" class="text" placeholder="输入姓名">
+    <button type="button" class="save">确认</button>
+    <button type="button" class="picture">生成图片</button>
    <div class="need" style="height: 200px;width: 400px">
-    <p class="title" style="color: white">ddd</p>
-    <p class="area" style="color: white">这里是你需要截取到的区域</p>
+    <p class="title" style="color: white">hello</p>
+    <p class="area" style="color: white">欢迎，这里是你需要截取到的区域</p>
 </div>
 </div>
 
@@ -100,8 +103,8 @@ console.log("操作系统"+getOS());
             var canvasHeight = canvas.height;
             console.log(canvasWidth+"    "+canvasHeight);
             // 渲染canvas
-             $(".need").html("");
-             $(".need").after(canvas);
+             $(".need").hide();
+             // $(".need").after(canvas);
             // $('.need').after(canvas);
                 // 调用Canvas2Image插件
                     let w = $(window).width(); //图片宽度
@@ -109,7 +112,7 @@ console.log("操作系统"+getOS());
                      let h = 400;
                 var img = Canvas2Image.convertToImage(canvas, canvasWidth, canvasHeight);
                 // 渲染图片
-                $(".need").html("");
+                // $(".need").html("");
                 $(".need").after(img);
                 // 保存
                     let type = "png"; //图片类型
@@ -119,7 +122,7 @@ console.log("操作系统"+getOS());
                     // w = (w === '') ? canvasWidth : w; //判断输入宽高是否为空，为空时保持原来的值
 
                     // h = (h === '') ? canvasHeight : h;
-                    // if(getOS()=="Others")
+                    if(getOS()=="Others")
                     {
                     // 调用Canvas2Image插件
                     Canvas2Image.saveAsImage(canvas, w, h, type, f);
