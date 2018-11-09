@@ -636,12 +636,12 @@ function notFoundCallback() {
 }
 var md = new MobileDetect(window.navigator.userAgent);
 
-$(document).ready(function () {
-  Identity.work();
-  $('.template main').mCustomScrollbar({
-    theme: 'dark'
-  });
-});
+// $(document).ready(function () {
+//   Identity.work();
+//   $('.template main').mCustomScrollbar({
+//     theme: 'dark'
+//   });
+// });
 
 function loadProject() {
   Router.route(undefined, function () {
