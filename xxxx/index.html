@@ -79,20 +79,24 @@
 <script>
     var src='http://pczr1g7oj.bkt.clouddn.com/Alan%20Walker,Au%EF%BC%8FRa,Tomine%20Harket%20-%20Darkside.mp4';
 
+    // 禁止双击放大事件
     var lastTouchEnd = 0;
-document.documentElement.addEventListener('touchend', function (event) {
-  var now = Date.now();
-  if (now - lastTouchEnd <= 300) {
-    event.preventDefault();
-  }
-  lastTouchEnd = now;
-}, false);
+    document.documentElement.addEventListener('touchend', function (event) {
+        var now = Date.now();
+        // 检测两次点击事件间隔
+        if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+        }
+        lastTouchEnd = now;
+        }, false);
+
+    // 禁止页面的滑动操作
     document.body.addEventListener('touchmove', function(e) {
+　　      e.stopPropagation();//阻止默认事件
+　　      e.preventDefault();//阻止冒泡
+        },{ passive: false });
 
-　　e.stopPropagation();//阻止默认事件
-　　e.preventDefault();//阻止冒泡
-},{ passive: false });
-
+    // 当屏幕上已经有一个手指，再有一个手指放上去时触发
     // document.body.addEventListener('gesturestart', function (event) {
     //       event.preventDefault();
     //       if (event.targetTouches.length > 1) {
@@ -120,17 +124,19 @@ document.documentElement.addEventListener('touchend', function (event) {
                 }
             },//[可选],video currenttime回调;
             onStart:function(){
+                // 为了解决视频的双指放大问题加的遮罩层，用以屏蔽对视频的操作
                 var mask=document.getElementById('mask');
                 mask.style.display="block";
                 var ss=document.getElementById('video');
-         ss.addEventListener('touchstart', function (e) {
-              if (e.targetTouches.length > 1) {
-                e.preventDefault();
-              }
+                // 禁止双指缩放功能，经测试发现不可以禁止iOS视频的双指放大，iOS依然可以打开默认播放器
+                ss.addEventListener('touchstart', function (e) {
+                if (e.targetTouches.length > 1) {
+                    e.preventDefault();
+                }
             }, false);
-        //  ss.addEventListener('gesturestart', function (event) {
-        //   event.preventDefault();
-        // },false);
+                //  ss.addEventListener('gesturestart', function (event) {
+                //   event.preventDefault();
+                // },false);
       
                 document.getElementById('loading').style.display='none';
                 console.log('video start');
@@ -154,6 +160,18 @@ document.documentElement.addEventListener('touchend', function (event) {
             videoPlayer.play();
         });
 
+    // 默认为自动播放，isVideoCanAutoPlay默认为true
+    // 但是由于Chrome浏览器限制，自动播放不生效，但是微信Safari等生效，为了避免自动播放，不进行自动播放判断
+    // if(videoPlayer.isVideoCanAutoPlay)
+    // {
+    //     videoPlayer.play();
+    // }
+    // else
+    // {
+    //     //others
+    // }
+    // 声明：因为Chrome浏览器限制，要让视频一开始静音才能播放，否则视频无法播放，或者让用户交互播放视频
+    // 对于Android用户，需要将视频与文件放在同一服务器下，如果采用外链方式会导致Android用户微信手Q用自己播放器打开
 </script>
 
 

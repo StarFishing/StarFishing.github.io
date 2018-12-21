@@ -7,8 +7,11 @@ $(function(){
     var remaind=$(".remaind");
     var know=$(".know");
     var content=$(".content");
-    var interfaceUrl=["http://jqaaa.com/jq3/?url=&url=","http://jx.598110.com/v/3.php?url=","http://www.1717yun.com/jx/ty.php?url="];
-    var href="http://jqaaa.com/jq3/?url=&url=";
+    // var interfaceUrl=["http://jqaaa.com/jq3/?url=&url=","http://jx.598110.com/v/3.php?url=","http://www.1717yun.com/jx/ty.php?url="];
+    // var href="http://jqaaa.com/jq3/?url=&url=";
+    var interfaceUrl=["http://jx.ovov.cc/?url=","http://vip.jlsprh.com/?url=","http://jx.618ge.com/?url="];
+    var readydata="http://jx.598110.com/?url=";//备用接口
+    var href="http://jx.aeidu.cn/index.php?url=";
     var textinner=["我查个锤子，你都没输网址","搞毛啊，都不输入","又点人家，快说想看什么"];
     var count=0;
     remaind.hide();
