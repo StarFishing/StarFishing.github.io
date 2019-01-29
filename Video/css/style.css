@@ -104,27 +104,19 @@ body {
   overflow: hidden;
 }
 .tip {
-  /* width: 40px;
-  float: right;
-  border: 1px solid;
-  text-align: center;
-  font-size: 16px;
-  line-height: 40px;
-  border-radius: 10px; */
-  box-sizing: border-box;
-  width: 40px;
-  color: #d3dfdba1;
-  height: 40px;
-  display: inline-block;
-  text-align: center;
-  border-left: 1px solid black;
-  font-size: 16px;
-  line-height: 40px;
-  margin-left: -46px;
-  border-radius: 10px;
-  cursor: pointer;
-  background-color: #4d403c4d;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    width: 20px;
+    color: #e3f0eca1;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: -30px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #b5b1b04d;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .Cinterface {
   margin-top: 60px;

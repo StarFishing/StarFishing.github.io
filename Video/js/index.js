@@ -16,11 +16,12 @@ $(function() {
     'http://vip.jlsprh.com/?url=',
     'http://jx.618ge.com/?url='
   ]
-  var readydata = 'http://jx.598110.com/?url=' //备用接口
+  var readydata = ['http://jx.598110.com/?url=','http://app.baiyug.cn:2019/vip/?url=','http://app.baiyug.cn:2019/vip/search/?url='] //备用接口
+
   var href = 'http://jx.aeidu.cn/index.php?url='
   var textinner = [
     '我查个锤子，你都没输网址',
-    '搞毛啊，都不输入',
+    '越努力，越幸运',
     '又点人家，快说想看什么'
   ]
   var v_url=['https://www.iqiyi.com/','https://v.qq.com/','https://www.mgtv.com/','https://www.youku.com/']
@@ -53,7 +54,7 @@ $(function() {
     } else {
       remaind.slideUp()
       setTimeout(function() {
-        var url = href + text
+        var url = href+ text
         // window.location.href = 'http://jqaaa.com/jq3/?url=&url='+text;
         window.open(url)
       }, 500)
