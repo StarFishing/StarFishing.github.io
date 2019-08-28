@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>report</title>
+    <style>
+      .wrapper {
+        background: RGBA(47, 52, 56, 1);
+        color: white;
+        width: 800px;
+        margin: 0 auto;
+      }
+      .wrapper p {
+        background: brown;
+        padding: 5px;
+        border-radius: 10px;
+        font-family: serif;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body class="wrapper">
+    <h2>
+      <a
+        name="header-n16"
+        class="md-header-anchor md-print-anchor"
+        href="af://n16"
+      >
+      </a
+      ><span>html2canvas +jsPDF</span>
+    </h2>
+    <p>
+      <span
+        >这种方式存在图片截断的问题，并且生成的文件有一定程度的模糊，色彩还原度相较于系统自己的print较高，缺点是页脚页眉的添加无法实现。（在火狐测试条件下canvas生成图片会产生跨域问题，正式发布后应该可以解决，这样图片不会再存在跨域）</span
+      >
+    </p>
+    <h2>
+      <a
+        name="header-n18"
+        class="md-header-anchor md-print-anchor"
+        href="af://n18"
+      >
+      </a
+      ><span>调用系统自带的print</span>
+    </h2>
+    <p>
+      <span
+        >这种方式也存在图片断层的问题，优点是能够包含页眉页脚，但是生成的PDF存在一定程度上的样式错乱问题，还原度不如上者，且不同厂家浏览器表现不一致。</span
+      >
+    </p>
+    <h2>
+      <a
+        name="header-n20"
+        class="md-header-anchor md-print-anchor"
+        href="af://n20"
+      >
+      </a
+      ><span>PDFjs</span>
+    </h2>
+    <p>
+      <span
+        >这种方式不是用来生成PDF文件的，而是在前端对于服务端返回的文件进行一个</span
+      ><strong><span>预览</span></strong
+      ><span
+        >，不支持本地文件的预览，会产生跨域的问题。预览的质量取决于PDF文件的质量。</span
+      >
+    </p>
+    <h2>
+      <a
+        name="header-n22"
+        class="md-header-anchor md-print-anchor"
+        href="af://n22"
+      >
+      </a
+      ><span>wkhtmltopdf</span>
+    </h2>
+    <p>
+      <span
+        >这种方式需要服务端安装，然后执行根据HTML字符串或者连接生成PDF，这种方式较为稳定高效，并且包含页眉页脚，缺点是智能在服务端进行操作，因为是命令行操作的方式，但是功能强大。</span
+      >
+    </p>
+  </body>
+</html>
